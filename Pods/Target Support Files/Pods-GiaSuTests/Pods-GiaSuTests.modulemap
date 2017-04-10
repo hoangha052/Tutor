@@ -1,0 +1,6 @@
+framework module Pods_GiaSuTests {
+  umbrella header "Pods-GiaSuTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (4.4.0)
+  - Gloss (1.2.1)
+  - IQKeyboardManagerSwift (4.0.4)
+  - Kingfisher (3.6.0)
+  - SnapKit (3.2.0)
+  - SVProgressHUD (2.1.2)
+  - UIColor_Hex_Swift (2.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - Gloss (~> 1.2)
+  - IQKeyboardManagerSwift (from `https://github.com/hackiftekhar/IQKeyboardManager.git`, branch `swift3`)
+  - Kingfisher (~> 3.0)
+  - SnapKit (~> 3.2.0)
+  - SVProgressHUD (~> 2.1.2)
+  - UIColor_Hex_Swift (from `https://github.com/yeahdongcn/UIColor-Hex-Swift.git`, branch `Swift-3.0`)
+
+EXTERNAL SOURCES:
+  IQKeyboardManagerSwift:
+    :branch: swift3
+    :git: https://github.com/hackiftekhar/IQKeyboardManager.git
+  UIColor_Hex_Swift:
+    :branch: Swift-3.0
+    :git: https://github.com/yeahdongcn/UIColor-Hex-Swift.git
+
+CHECKOUT OPTIONS:
+  IQKeyboardManagerSwift:
+    :commit: d27180d877c8d36d5be80ee9d8c24d184ac26081
+    :git: https://github.com/hackiftekhar/IQKeyboardManager.git
+  UIColor_Hex_Swift:
+    :commit: f5420efc3ce48796a450dc862202f5758ce4a58b
+    :git: https://github.com/yeahdongcn/UIColor-Hex-Swift.git
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Gloss: 9ab33b8ede01e4232571d43a6bf9259b85d1de69
+  IQKeyboardManagerSwift: e0964d04d6a29b71016fd346dca13ecb80a2823a
+  Kingfisher: 300035f9a40634dc9b452d946c9f22250688fecd
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  UIColor_Hex_Swift: e91dc51f6bf252ec7bf74c8704ceedeeb7640c1c
+
+PODFILE CHECKSUM: f3cdde555675e94726405cf2c6df9242d3b3fdf2
+
+COCOAPODS: 1.1.1
