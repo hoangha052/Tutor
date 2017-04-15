@@ -7,21 +7,9 @@
 //
 
 import Foundation
-import Gloss
+import ObjectMapper
 
-//class UserSetting: NSObject, NSCoding {
-//    var currency: String?
-//    var messageNotification: Bool?
-//    var reservationNotification: Bool?
-//    var tinryUpdateNotification: Bool?
-//    
-//    
-//    func updateWithCurrency(_ currency: String) {
-//        self.currency = currency
-//    }
-//}
-
-final class User: NSObject, Decodable, NSCoding {
+final class User: NSObject {
     var userId: Int?
     var username: String?
     var clientKey: String?
@@ -32,9 +20,20 @@ final class User: NSObject, Decodable, NSCoding {
     var userRoleId: Int?
     var isActive: Bool?
     var name: String?
-//    var setting: UserSetting?
     var paypalEmail: String?
     
+    required init?(map: Map) { }
+    
+    func mapping(map: Map) {
+        
+//        self.status <- map["status"]
+//        self.code <- map["code"]
+//        self.message <- map["message"]
+//        self.data <- map["data"]
+    }
+    
+    
+    /*
     init?(json: JSON) {
         self.userId = "Id" <~~ json
         self.username = "Username" <~~ json
@@ -46,7 +45,6 @@ final class User: NSObject, Decodable, NSCoding {
         self.isActive = "Active" <~~ json
         self.name = "Name" <~~ json
         self.avatar = "Link" <~~ json
-//        self.setting = Decoder.decodeUserSetting(json)
     }
     
     init(userId: Int) {
@@ -63,7 +61,6 @@ final class User: NSObject, Decodable, NSCoding {
         self.isActive = aDecoder.decodeBool(forKey: "IsActive")
         self.avatar = aDecoder.decodeObject(forKey: "Link") as? String
         self.name = aDecoder.decodeObject(forKey: "Name") as? String
-//        self.setting = aDecoder.decodeObject(forKey: "UserSetting") as? UserSetting
         self.paypalEmail = aDecoder.decodeObject(forKey: "PaypalEmail") as? String
     }
     
@@ -77,7 +74,6 @@ final class User: NSObject, Decodable, NSCoding {
         aCoder.encode(self.isActive!, forKey: "IsActive")
         aCoder.encode(self.avatar, forKey: "Link")
         aCoder.encode(self.name, forKey: "Name")
-//        aCoder.encode(self.setting, forKey: "UserSetting")
         aCoder.encode(self.paypalEmail, forKey: "PaypalEmail")
-    }
+    }*/
 }

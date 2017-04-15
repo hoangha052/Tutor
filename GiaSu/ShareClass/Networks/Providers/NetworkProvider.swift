@@ -11,70 +11,64 @@ import Alamofire
 //import RxSwift
 
 class NetworkProvider {
-//    
-//    func get(_ urlString: String , params: [String : AnyObject]?) -> Observable<AnyObject?> {
-//        return requestWithMethod(method: .get, urlString: urlString, params: params)
-//    }
-//    
-//    func getMethodWithParams(_ urlString: String , params: [String : AnyObject]?) -> Observable<AnyObject?> {
-//        return requestWithMethodParams(.get, urlString: urlString, params: params)
-//    }
-//    
-//    func requestWithMethodParams(_ method: HTTPMethod, urlString: String, params: [String : AnyObject]?) -> Observable<AnyObject?> {
-//        return Observable<AnyObject?>.create { observer -> Disposable in
-//
-//          let request =  Alamofire.request(urlString, method: method, parameters: params)
-//            request.responseJSON(completionHandler: { response in
-//                switch response.result {
-//                case .success(let response):
-//                    observer.onNext(response as AnyObject?)
-//                    observer.onCompleted()
-//                case .failure(let error):
-//                    debugPrint("Error \(error)")
-//                    observer.onError(error)
-//                }
-//            })
-//            return Disposables.create() {
-//                request.cancel()
-//            }
-//        }
-//        
-//    }
-//    
-//    
-//    func post(_ urlString: String , params: [String : AnyObject]?) -> Observable<AnyObject?> {
-//        return requestWithMethod(method: .post, urlString: urlString, params: params)
-//    }
-//    
-//    func put(_ urlString: String , params: [String : AnyObject]? ) -> Observable<AnyObject?> {
-//        return requestWithMethod(method: .put, urlString: urlString, params: params)
-//    }
-//    
-//    func delete(_ urlString: String , params: [String : AnyObject]?) -> Observable<AnyObject?> {
-//        return requestWithMethod(method: .delete, urlString: urlString, params: params)
-//    }
-//    
-//    func requestWithMethod(method methodRequest: HTTPMethod, urlString: String, params: [String : AnyObject]? , bodyParams: AnyObject? = nil) -> Observable<AnyObject?> {
-//        return Observable<AnyObject?>.create { observer -> Disposable in
-//
-//            let request = Alamofire.request(urlString, method: methodRequest, parameters: params, encoding: JSONEncoding.default, headers: nil)
-//            request.responseJSON(completionHandler: { response in
-//                switch response.result {
-//                case .success(let response):
-//                    observer.onNext(response as AnyObject?)
-//                    observer.onCompleted()
-//                case .failure(let error):
-//                    debugPrint("Error \(error)")
-//                    observer.onError(error)
-//                }
-//            })
-//            
-//            return Disposables.create() {
-//                request.cancel()
-//            }
-//        }
-//    }
-//    
+    
+    func get(_ urlString: String , params: [String : AnyObject]?, completionHandler: @escaping(AnyObject?, Error?) ->()) {
+        return requestWithMethod(method: .get, urlString: urlString, params: params, completionHandler: completionHandler)
+    }
+    
+       /*
+    func getMethodWithParams(_ urlString: String , params: [String : AnyObject]?) -> DataResponse<AnyObject?> {
+        return requestWithMethodParams(.get, urlString: urlString, params: params)
+    }
+
+
+    func requestWithMethodParams(_ method: HTTPMethod, urlString: String, params: [String : AnyObject]?) -> DataResponse<AnyObject?> {
+        return Observable<AnyObject?>.create { observer -> Disposable in
+
+          let request =  Alamofire.request(urlString, method: method, parameters: params)
+            request.responseJSON(completionHandler: { response in
+                switch response.result {
+                case .success(let response):
+                    observer.onNext(response as AnyObject?)
+                    observer.onCompleted()
+                case .failure(let error):
+                    debugPrint("Error \(error)")
+                    observer.onError(error)
+                }
+           })
+            return Disposables.create() {
+                request.cancel()
+           }
+        }
+        
+    }*/
+    
+    func post(_ urlString: String , params: [String : AnyObject]?, completionHandler: @escaping(AnyObject?, NSError?) -> ()) {
+        return requestWithMethod(method: .post, urlString: urlString, params: params, completionHandler:completionHandler )
+    }
+    
+    func put(_ urlString: String , params: [String : AnyObject]?, completionHandler: @escaping(AnyObject?, NSError?) -> () ) {
+        return requestWithMethod(method: .put, urlString: urlString, params: params, completionHandler:completionHandler)
+    }
+    
+    func delete(_ urlString: String , params: [String : AnyObject]?, completionHandler: @escaping(AnyObject?, NSError?) -> ()) {
+        return requestWithMethod(method: .delete, urlString: urlString, params: params, completionHandler:completionHandler)
+    }
+    
+    
+    func requestWithMethod(method methodRequest: HTTPMethod, urlString: String, params: [String : AnyObject]? , bodyParams: AnyObject? = nil, completionHandler: @escaping(AnyObject?, NSError?) -> ()){
+        
+        Alamofire.request(urlString, method: methodRequest, parameters: params,encoding: JSONEncoding.default, headers: nil).responseJSON { (dataResponse) in
+            switch dataResponse.result {
+            case .success(let response):
+                completionHandler(response as AnyObject?, nil)
+            case .failure(let error):
+                completionHandler(nil, error as NSError?)
+            }
+        }
+    }
+    
+    
 ////    func postDataWithMultipart(urlString: String, imageData:[AnyObject], params:[String: AnyObject]?) -> Observable<AnyObject?> {
 //    func postDataWithMultipart(_ urlString: String, imageData:[UIImage?], params:[String: AnyObject]?) -> Observable<AnyObject?> {
 //        return Observable<AnyObject?>.create{ observer in

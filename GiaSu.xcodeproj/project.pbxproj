@@ -16,6 +16,7 @@
 		67057A6E1E8CA25300039756 /* GiaSuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67057A6D1E8CA25300039756 /* GiaSuUITests.swift */; };
 		676DFBF01E9BDBE2009DB6B0 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676DFBEF1E9BDBE2009DB6B0 /* FavoriteViewController.swift */; };
 		676DFBF21E9BDEBE009DB6B0 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676DFBF11E9BDEBE009DB6B0 /* ProfileDetailViewController.swift */; };
+		6779E4BE1EA1D2E9003AEC22 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6779E4BD1EA1D2E9003AEC22 /* UserResponse.swift */; };
 		678FB68E1E91E634002C2D73 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6241E91E634002C2D73 /* BaseViewController.swift */; };
 		678FB68F1E91E634002C2D73 /* PageHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6271E91E634002C2D73 /* PageHomeViewController.swift */; };
 		678FB6901E91E634002C2D73 /* ProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6281E91E634002C2D73 /* ProfileInfoViewController.swift */; };
@@ -48,14 +49,13 @@
 		678FB6AD1E91E634002C2D73 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB64D1E91E634002C2D73 /* UserManager.swift */; };
 		678FB6E01E91E634002C2D73 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6811E91E634002C2D73 /* User.swift */; };
 		678FB6E11E91E634002C2D73 /* NetworkConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6841E91E634002C2D73 /* NetworkConfigurations.swift */; };
-		678FB6E21E91E634002C2D73 /* AccommodationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6861E91E634002C2D73 /* AccommodationProvider.swift */; };
+		678FB6E21E91E634002C2D73 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6861E91E634002C2D73 /* UserProvider.swift */; };
 		678FB6E31E91E634002C2D73 /* ActivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6871E91E634002C2D73 /* ActivityProvider.swift */; };
 		678FB6E41E91E634002C2D73 /* AuthNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6881E91E634002C2D73 /* AuthNetworkProvider.swift */; };
 		678FB6E51E91E634002C2D73 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6891E91E634002C2D73 /* NetworkProvider.swift */; };
 		678FB6E61E91E634002C2D73 /* OfferNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB68A1E91E634002C2D73 /* OfferNetworkProvider.swift */; };
 		678FB6E71E91E634002C2D73 /* ReservationNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB68B1E91E634002C2D73 /* ReservationNetworkProvider.swift */; };
 		678FB6E81E91E634002C2D73 /* TinryNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB68C1E91E634002C2D73 /* TinryNetworkProvider.swift */; };
-		678FB6E91E91E634002C2D73 /* TransportProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB68D1E91E634002C2D73 /* TransportProvider.swift */; };
 		82DA3123F9A474D65394B240 /* Pods_GiaSu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AABC7527BA87D388EED279 /* Pods_GiaSu.framework */; };
 		9C17E44B40398BF3D4BA3E6B /* Pods_GiaSuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E70C0496ED025E0E03B240 /* Pods_GiaSuTests.framework */; };
 /* End PBXBuildFile section */
@@ -95,6 +95,7 @@
 		67057A6F1E8CA25300039756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		676DFBEF1E9BDBE2009DB6B0 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		676DFBF11E9BDEBE009DB6B0 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
+		6779E4BD1EA1D2E9003AEC22 /* UserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		678BDAF08514BFDDE57B583E /* Pods-GiaSu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiaSu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiaSu/Pods-GiaSu.debug.xcconfig"; sourceTree = "<group>"; };
 		678FB6241E91E634002C2D73 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		678FB6271E91E634002C2D73 /* PageHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageHomeViewController.swift; sourceTree = "<group>"; };
@@ -128,14 +129,13 @@
 		678FB64D1E91E634002C2D73 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		678FB6811E91E634002C2D73 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		678FB6841E91E634002C2D73 /* NetworkConfigurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfigurations.swift; sourceTree = "<group>"; };
-		678FB6861E91E634002C2D73 /* AccommodationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccommodationProvider.swift; sourceTree = "<group>"; };
+		678FB6861E91E634002C2D73 /* UserProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		678FB6871E91E634002C2D73 /* ActivityProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityProvider.swift; sourceTree = "<group>"; };
 		678FB6881E91E634002C2D73 /* AuthNetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNetworkProvider.swift; sourceTree = "<group>"; };
 		678FB6891E91E634002C2D73 /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		678FB68A1E91E634002C2D73 /* OfferNetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferNetworkProvider.swift; sourceTree = "<group>"; };
 		678FB68B1E91E634002C2D73 /* ReservationNetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationNetworkProvider.swift; sourceTree = "<group>"; };
 		678FB68C1E91E634002C2D73 /* TinryNetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinryNetworkProvider.swift; sourceTree = "<group>"; };
-		678FB68D1E91E634002C2D73 /* TransportProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportProvider.swift; sourceTree = "<group>"; };
 		7B4B8C4B5D0E801FF913D238 /* Pods-GiaSuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiaSuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiaSuUITests/Pods-GiaSuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		94763844887CF387A4F5930E /* Pods-GiaSuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiaSuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiaSuTests/Pods-GiaSuTests.release.xcconfig"; sourceTree = "<group>"; };
 		D0AABC7527BA87D388EED279 /* Pods_GiaSu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiaSu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -359,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				678FB6811E91E634002C2D73 /* User.swift */,
+				6779E4BD1EA1D2E9003AEC22 /* UserResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -383,14 +384,13 @@
 		678FB6851E91E634002C2D73 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				678FB6861E91E634002C2D73 /* AccommodationProvider.swift */,
+				678FB6861E91E634002C2D73 /* UserProvider.swift */,
 				678FB6871E91E634002C2D73 /* ActivityProvider.swift */,
 				678FB6881E91E634002C2D73 /* AuthNetworkProvider.swift */,
 				678FB6891E91E634002C2D73 /* NetworkProvider.swift */,
 				678FB68A1E91E634002C2D73 /* OfferNetworkProvider.swift */,
 				678FB68B1E91E634002C2D73 /* ReservationNetworkProvider.swift */,
 				678FB68C1E91E634002C2D73 /* TinryNetworkProvider.swift */,
-				678FB68D1E91E634002C2D73 /* TransportProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -694,7 +694,7 @@
 				678FB6A21E91E634002C2D73 /* UICollectionViewExtension.swift in Sources */,
 				678FB6941E91E634002C2D73 /* NotificationServices.swift in Sources */,
 				678FB69F1E91E634002C2D73 /* EncoderExtension.swift in Sources */,
-				678FB6E21E91E634002C2D73 /* AccommodationProvider.swift in Sources */,
+				678FB6E21E91E634002C2D73 /* UserProvider.swift in Sources */,
 				678FB69D1E91E634002C2D73 /* ArrayExtension.swift in Sources */,
 				678FB6A31E91E634002C2D73 /* UIColorExtension.swift in Sources */,
 				676DFBF21E9BDEBE009DB6B0 /* ProfileDetailViewController.swift in Sources */,
@@ -714,8 +714,8 @@
 				678FB6E61E91E634002C2D73 /* OfferNetworkProvider.swift in Sources */,
 				678FB6A11E91E634002C2D73 /* StringExtension.swift in Sources */,
 				678FB6A91E91E634002C2D73 /* UIViewControllerExtension.swift in Sources */,
-				678FB6E91E91E634002C2D73 /* TransportProvider.swift in Sources */,
 				678FB6901E91E634002C2D73 /* ProfileInfoViewController.swift in Sources */,
+				6779E4BE1EA1D2E9003AEC22 /* UserResponse.swift in Sources */,
 				678FB6E71E91E634002C2D73 /* ReservationNetworkProvider.swift in Sources */,
 				678FB6E11E91E634002C2D73 /* NetworkConfigurations.swift in Sources */,
 				678FB68E1E91E634002C2D73 /* BaseViewController.swift in Sources */,

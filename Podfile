@@ -8,6 +8,7 @@ target 'GiaSu' do
   # Pods for GiaSu
 
     pod 'Alamofire', '~> 4.4'
+    pod 'AlamofireObjectMapper', '~> 4.0'
     pod ‘Gloss’, ‘~> 1.2’
     pod 'Kingfisher', '~> 3.0'
     pod 'SnapKit', '~> 3.2.0'
