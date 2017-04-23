@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import AlamofireObjectMapper
 //import RxSwift
 
 class NetworkProvider {
@@ -59,6 +60,7 @@ class NetworkProvider {
     func requestWithMethod(method methodRequest: HTTPMethod, urlString: String, params: [String : AnyObject]? , bodyParams: AnyObject? = nil, completionHandler: @escaping(AnyObject?, NSError?) -> ()){
         
         Alamofire.request(urlString, method: methodRequest, parameters: params,encoding: JSONEncoding.default, headers: nil).responseJSON { (dataResponse) in
+            
             switch dataResponse.result {
             case .success(let response):
                 completionHandler(response as AnyObject?, nil)

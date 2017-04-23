@@ -1,70 +1,45 @@
 //
 //  UserManager.swift
-//  Bartr
+//  WeTrade
 //
-//  Created by Thuy Luong on 5/25/16.
-//  Copyright © 2016 Thuy Luong. All rights reserved.
+//  Created by hoangha052 on 2/27/17.
+//  Copyright © 2017 admin. All rights reserved.
 //
 
+import UIKit
 import Foundation
-//import RxSwift
-//import RxCocoa
-//import CoreLocation
-//import FirebaseMessaging
+
 
 class UserManager: NSObject {
     
     static let sharedInstance = UserManager()
-    /*
     var loggedInUser: User?
-//    var currentLocation : CLLocationCoordinate2D?
-    var currentLocation: Variable<CLLocationCoordinate2D?> = Variable(nil)
-    var locationManager = CLLocationManager()
-    var currentAddress: String?
-    var disposeBag = DisposeBag()
-    var senderUser: User?
     
     override init() {
         super.init()
-        self.startRequestingLocation()
     }
     
-    func startRequestingLocation() {
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.distanceFilter = 100
-            locationManager.delegate = self
-            locationManager.startUpdatingLocation()
-            
-//            locationManager.didUpdateLocations.subscribeNext { [unowned self] location in
-//                self.currentLocation = location.first?.coordinate
-//                self.locationManager.stopUpdatingLocation()
-//            }.addDisposableTo(disposeBag)
+    func savePinCode(key: String, pinCode: String){
+        UserDefaults.standard.set(pinCode, forKey: key)
+        UserDefaults.standard.synchronize()
+    }
+    
+    func getPinCode(key: String) -> String?{
+        guard let value = UserDefaults.standard.object(forKey: key) as? String else {
+            return nil
         }
+        return value
     }
     
-    class func saveFacebookToken(_ token: String, email: String) {
-        UserDefaults.standard.set(token, forKey: Constants.UserDefaultKey.facebookToken)
-        UserDefaults.standard.set(email, forKey: Constants.UserDefaultKey.facebookEmail)
-    }
-    
-    class func facebookToken() -> String? {
-        return UserDefaults.standard.object(forKey: Constants.UserDefaultKey.facebookToken) as? String
-    }
-    
-    class func facebookEmail() -> String? {
-        return UserDefaults.standard.object(forKey: Constants.UserDefaultKey.facebookEmail) as? String
-    }
-    
-    class func saveUser(_ user: User) {
+    func saveUser(_ user: User) {
+        self.loggedInUser = nil
         let prefs = UserDefaults.standard
         let encodedUserData = NSKeyedArchiver.archivedData(withRootObject: user)
         prefs.set(encodedUserData, forKey: "User")
         prefs.synchronize()
     }
     
-    func savedUser() -> User? {
+    func getUser() -> User? {
         guard loggedInUser == nil else {
             return loggedInUser
         }
@@ -76,73 +51,38 @@ class UserManager: NSObject {
         return loggedInUser
     }
     
-    class func subscribeTopicForPushNotification(_ user: User) {
-        if let clientKey = user.clientKey {
-            FIRMessaging.messaging().subscribe(toTopic: "/topics/\(clientKey)")
-        }
-    }
-    
-    func logout() {
-        guard loggedInUser == nil else {
-            if let clientKey = loggedInUser!.clientKey {
-                FIRMessaging.messaging().unsubscribe(fromTopic: "/topics/\(clientKey)")
-            }
-
-            loggedInUser = nil
-            let prefs = UserDefaults.standard
-            prefs.removeObject(forKey: "User")
-            prefs.synchronize()
-            return
-        }
-    }
-    
-    func checkCurrentUserForUserId(_ userId: Int) -> Bool {
-        if let validUser = loggedInUser {
-            return userId == validUser.userId
-        }
-        return false
-    }
-    
-    func displayLocationInfo(_ placemark: CLPlacemark) {
+    func removeSavedUser(){
+        let userDefault = UserDefaults.standard
+        userDefault.removeObject(forKey: "User")
+        userDefault.synchronize()
         
-        //stop updating location to save battery life
-        //            locationManager.stopUpdatingLocation()
-        currentAddress = placemark.name
+        loggedInUser = nil
     }
-    */
+    
+//    func getUserID() -> String{
+//        let userInfo = getUser()
+//        guard let userID = userInfo?.id else {
+//            return ""
+//        }
+//        
+//        return "\(userID)"
+//    }
+//    
+//    func isUserLoggedIn() -> Bool{
+//        let userInfo = getUser()
+//        return userInfo?.isLogin ?? false
+//    }
+//    
+//    class func subscribeTopicForPushNotification(_ user: User) {
+//        //        if let clientKey = user.clientKey {
+//        //            FIRMessaging.messaging().subscribe(toTopic: "/topics/\(clientKey)")
+//        //        }
+//    }
+//    
+//    func stateUser(isLogin: Bool) {
+//        if let userInfo = getUser(){
+//            userInfo.isLogin = isLogin
+//            saveUser(userInfo)
+//        }
+//    }
 }
-
-//MARK: User location
-//extension UserManager {
-//    func getCurrentLocation(forcedReload reload: Bool = false){
-//        guard reload == true else {
-//            locationManager.stopUpdatingLocation()
-//            return
-//        }
-//        
-//        if CLLocationManager.locationServicesEnabled() {
-//            locationManager.requestWhenInUseAuthorization()
-//            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//            locationManager.distanceFilter = 100
-//            locationManager.delegate = self
-//            locationManager.startUpdatingLocation()
-//        }
-//
-//    }
-//}
-
-//extension UserManager: CLLocationManagerDelegate {
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        debugPrint("Update location")
-//        
-//        self.currentLocation.value = locations.first?.coordinate
-//        self.locationManager.stopUpdatingLocation()
-//        
-//    }
-//    
-//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-//        debugPrint("Error \(error)")
-//    }
-//    
-//}
-

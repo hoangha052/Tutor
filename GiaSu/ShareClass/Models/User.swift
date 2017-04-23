@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import ObjectMapper
+import Gloss
 
-final class User: NSObject {
+final class User: NSObject, Decodable {
     var userId: Int?
     var username: String?
     var clientKey: String?
@@ -21,19 +21,9 @@ final class User: NSObject {
     var isActive: Bool?
     var name: String?
     var paypalEmail: String?
-    
-    required init?(map: Map) { }
-    
-    func mapping(map: Map) {
-        
-//        self.status <- map["status"]
-//        self.code <- map["code"]
-//        self.message <- map["message"]
-//        self.data <- map["data"]
-    }
+    var descriptionStr: String?
     
     
-    /*
     init?(json: JSON) {
         self.userId = "Id" <~~ json
         self.username = "Username" <~~ json
@@ -41,10 +31,11 @@ final class User: NSObject {
         self.accessToken = "AccessToken" <~~ json
         self.email = "Email" <~~ json
         self.phone = "Phone" <~~ json
-        self.userRoleId = "UserRoleId" <~~ json
+        self.userRoleId = "userrole" <~~ json
         self.isActive = "Active" <~~ json
         self.name = "Name" <~~ json
         self.avatar = "Link" <~~ json
+        self.descriptionStr = "description" <~~ json
     }
     
     init(userId: Int) {
@@ -75,5 +66,5 @@ final class User: NSObject {
         aCoder.encode(self.avatar, forKey: "Link")
         aCoder.encode(self.name, forKey: "Name")
         aCoder.encode(self.paypalEmail, forKey: "PaypalEmail")
-    }*/
+    }
 }

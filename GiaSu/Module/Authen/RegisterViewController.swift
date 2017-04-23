@@ -1,15 +1,14 @@
 //
-//  ProfileDetailViewController.swift
+//  RegisterViewController.swift
 //  GiaSu
 //
-//  Created by hoangha052 on 4/10/17.
+//  Created by hoangha052 on 4/22/17.
 //  Copyright © 2017 hoangha052. All rights reserved.
 //
 
 import UIKit
 
-class ProfileDetailViewController: BaseViewController {
-    @IBOutlet weak var closeButton: UIButton!
+class RegisterViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +21,6 @@ class ProfileDetailViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func closeButtonClick(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    func getUserDetail() {
-//        UserProvider().getAllUser(completionHandler: <#T##(UserResponse?) -> ()#>)
-    }
 
     /*
     // MARK: - Navigation

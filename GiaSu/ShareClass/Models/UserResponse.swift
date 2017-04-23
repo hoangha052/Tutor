@@ -7,54 +7,34 @@
 //
 
 import UIKit
-import ObjectMapper
+import Gloss
 
-class UserResponse: Mappable {
-    var code: Int?
-    var message: String?
-    var status: Bool?
-    var data: User?
+class UserResponse: BaseResponse {
+    var data: [User]?
+    var userData: User?
     
-    var success   : Bool?
-    var terms     : String?
-    var privacy   : String?
-    var timestamp : CGFloat?
-    var source    : String?
-//    var quotes    : [Quote]?
-    
-    required init?(map: Map) { }
-    
-    func mapping(map: Map) {
-        
-        self.status <- map["status"]
-        self.code <- map["code"]
-        self.message <- map["message"]
-        self.data <- map["data"]
-        
-//        success    <- map["success"]
-//        terms      <- map["terms"]
-//        privacy    <- map["privacy"]
-//        timestamp  <- map["timestamp"]
-//        source     <- map["source"]
-        
-//        var dictionary: [String: CGFloat]?
-//        dictionary <- map["quotes"]
-//        quotes = dictionary?.map { return Quote(name: $0.key, val: $0.value) }
+    required init?(json: JSON) {
+        super.init(json: json)
+        self.userData = "Data" <~~ json
     }
     
-    init(httpError: NSError) {
-        self.code = httpError.code
-        self.message = httpError.localizedDescription
-        self.data = nil
+    init?(listUserJson: JSON) {
+        super.init(json: listUserJson)
+        self.data = "Data" <~~ listUserJson
     }
-    
-    func error() -> NSError {
-        return NSError(domain: "autospy", code: code ?? 1, userInfo: ["message" : message ?? "Unknown"])
-    }
-    
-    func noError() -> Bool {
-        return code == 0
-    }
+//    init(httpError: NSError) {
+//        self.code = httpError.code
+//        self.message = httpError.localizedDescription
+//        self.data = nil
+//    }
+//    
+//    func error() -> NSError {
+//        return NSError(domain: "autospy", code: code ?? 1, userInfo: ["message" : message ?? "Unknown"])
+//    }
+//    
+//    func noError() -> Bool {
+//        return code == 0
+//    }
     
     class Quote {
         

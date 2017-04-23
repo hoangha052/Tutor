@@ -35,30 +35,48 @@ protocol HomePageViewDelegate: class {
 class PageHomeViewController:  UIPageViewController {
     
     weak var homePageViewDelegate: HomePageViewDelegate?
+    var userList:[User]?
+    var orderedViewControllers: [UIViewController] = []
     
-    fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
-        let profileVC = UIStoryboard.tnr_createViewController(storyboardName: Constants.Storyboard.main, viewControllerIdentifier: String(describing: ProfileInfoViewController.self)) as! ProfileInfoViewController
-        
-        let profileVC2 = UIStoryboard.tnr_createViewController(storyboardName: Constants.Storyboard.main, viewControllerIdentifier: String(describing: ProfileInfoViewController.self)) as! ProfileInfoViewController
-
-        return [profileVC, profileVC2]
-    }()
+//    fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
+//        let profileVC =
+//        
+//        return [profileVC]
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
         delegate = self
-        if let initialViewController = orderedViewControllers.first as? ProfileInfoViewController {
-            scrollToViewController(initialViewController)
-             print("pageViewController")
-        }
+//        if let initialViewController = orderedViewControllers.first as? ProfileInfoViewController {
+//            scrollToViewController(initialViewController)
+//             print("pageViewController")
+//        }
        
+        self.getUserInfo()
+    }
+    
+    func getUserInfo() {
+        UserProvider().getAllUser { (dataResponse) in
+            self.userList = dataResponse?.data
+            let vc = self.profileViewCV(user: (self.userList?[safe: 0])!)
+            self.orderedViewControllers.append(vc)
+            self.scrollToViewController(vc)
+        }
     }
     
 }
 
 //MARK: Scrolling Handle
 extension PageHomeViewController {
+    func profileViewCV(user: User) -> ProfileInfoViewController {
+        let vc =  UIStoryboard.tnr_createViewController(storyboardName: Constants.Storyboard.main, viewControllerIdentifier: String(describing: ProfileInfoViewController.self)) as! ProfileInfoViewController
+        vc.userInfo = user
+//        vc.showUserInfo(userData: user)
+        return vc
+    }
+    
+    
     func selectViewControllerAtIndex(_ index: Int) {
         self.scrollToViewController(index: index)
     }
@@ -128,20 +146,27 @@ extension PageHomeViewController: UIPageViewControllerDataSource {
             return nil
         }
         
+        
         let previousIndex = viewControllerIndex - 1
         
         // User is on the first view controller and swiped left to loop to
         // the last view controller.
         guard previousIndex >= 0 else {
             return nil
-            //            return orderedViewControllers.last //for loop
         }
         
         guard orderedViewControllers.count > previousIndex else {
             return nil
         }
         
-        return orderedViewControllers[previousIndex]
+        if let vc = orderedViewControllers[safe: previousIndex] {
+            return vc
+        }
+        
+        let profileVC2 = UIStoryboard.tnr_createViewController(storyboardName: Constants.Storyboard.main, viewControllerIdentifier: String(describing: ProfileInfoViewController.self)) as! ProfileInfoViewController
+        orderedViewControllers.append(profileVC2)
+
+        return profileVC2
     }
     
     func pageViewController(_ pageViewController: UIPageViewController,
@@ -151,20 +176,25 @@ extension PageHomeViewController: UIPageViewControllerDataSource {
         }
         
         let nextIndex = viewControllerIndex + 1
-        let orderedViewControllersCount = orderedViewControllers.count
+        let orderedViewControllersCount = self.userList?.count
         
         // User is on the last view controller and swiped right to loop to
         // the first view controller.
         guard orderedViewControllersCount != nextIndex else {
-            //            return orderedViewControllers.first // for loop
             return nil
         }
         
-        guard orderedViewControllersCount > nextIndex else {
+        guard orderedViewControllersCount! > nextIndex else {
             return nil
         }
         
-        return orderedViewControllers[nextIndex]
+        if let vc = orderedViewControllers[safe: nextIndex] {
+            return vc
+        }
+        
+        let profileVC2 = self.profileViewCV(user: (self.userList?[safe:nextIndex]!)!)
+        orderedViewControllers.append(profileVC2)
+        return profileVC2
     }
     
 }

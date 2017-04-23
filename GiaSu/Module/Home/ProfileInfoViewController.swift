@@ -17,6 +17,8 @@ class ProfileInfoViewController: BaseViewController {
     @IBOutlet weak var expLabel: UILabel!
     @IBOutlet weak var btnMessenger: UIButton!
     @IBOutlet weak var btnFavorite: UIButton!
+    
+    var userInfo: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,8 @@ class ProfileInfoViewController: BaseViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.showProfileDetail(_:)))
         imageProfileView.addGestureRecognizer(tapGesture)
+        self.showUserInfo(userData: userInfo!)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +48,12 @@ class ProfileInfoViewController: BaseViewController {
         
         self.present(detailVC, animated: true, completion: nil)
     }
+    
+    func showUserInfo(userData: User) {
+        self.nameLabel.text = userData.descriptionStr!
+    }
+    
+
 
     /*
     // MARK: - Navigation
