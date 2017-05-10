@@ -51,6 +51,41 @@ class UserProvider {
         }
     }
     
+    func addFavoriteUser(favUserId: Int, completionHandler: @escaping(UserResponse?) -> ())  {
+        let userData = UserManager.sharedInstance.getUser()
+        let addFavoriteUrl = GiaSuAPI.User.addUserFavorite(15, 10).urlString()
+        
+        NetworkProvider().get(addFavoriteUrl, params:nil) { (responseObject, error) in
+            if let response = responseObject as? JSON {
+                let user = UserResponse.init(json: response)
+                completionHandler(user)
+            }
+        }
+    }
+    
+    func removeFavoriteUser(favUserId: Int, completionHandler: @escaping(UserResponse?) -> ())  {
+        let userData = UserManager.sharedInstance.getUser()
+        let removeFavoriteUrl = GiaSuAPI.User.removeUserFavorite(15, 10).urlString()
+        
+        NetworkProvider().get(removeFavoriteUrl, params:nil) { (responseObject, error) in
+            if let response = responseObject as? JSON {
+                let user = UserResponse.init(json: response)
+                completionHandler(user)
+            }
+        }
+    }
+    
+    func getListFavoriteUser(_ completionHandler: @escaping(UserResponse?) -> ())  {
+        let userData = UserManager.sharedInstance.getUser()
+        let listFavoriteUrl = GiaSuAPI.User.getListFavoriteUser(15).urlString()
+        
+        NetworkProvider().get(listFavoriteUrl, params:nil) { (responseObject, error) in
+            if let response = responseObject as? JSON {
+                let user = UserResponse.init(listUserJson: response)
+                completionHandler(user)
+            }
+        }
+    }
     
 //    static func addSoccerQuestion(match: String, callback: @escaping (_ result: UserResponse?)->()){
 //        

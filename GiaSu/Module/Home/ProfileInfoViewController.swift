@@ -41,6 +41,7 @@ class ProfileInfoViewController: BaseViewController {
     }
     
     @IBAction func btnFavoriteClick(_ sender: Any) {
+        
     }
     
     func showProfileDetail(_ sender: UITapGestureRecognizer) {

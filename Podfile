@@ -15,6 +15,7 @@ target 'GiaSu' do
     pod 'IQKeyboardManagerSwift', :git => 'https://github.com/hackiftekhar/IQKeyboardManager.git', :branch => 'swift3'
     pod 'SVProgressHUD', '~> 2.1.2'
     pod 'UIColor_Hex_Swift', :git => 'https://github.com/yeahdongcn/UIColor-Hex-Swift.git', :branch => 'Swift-3.0'
+    pod 'RATreeView', '~> 2.1.2'
     
 
   target 'GiaSuTests' do

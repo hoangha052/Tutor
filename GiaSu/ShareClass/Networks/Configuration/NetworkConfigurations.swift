@@ -27,43 +27,27 @@ enum GiaSuAPI {
 //    }()
     
     enum User {
-        case getEmail
-        case getRecomendations
         case login
         case register
         case getListUser(Int, Int, Int)
-        case updateCurrency
-        case updateNotificationSetting
-        case updatePayoutInfo
-        case getTourisTransactionHistory(Int, Int, Int)
-        case getProviderTransactionHistory (Int, Int, Int)
-        case feedback
+        case addUserFavorite(Int, Int)
+        case removeUserFavorite(Int, Int)
+        case getListFavoriteUser(Int)
         
         fileprivate func apiPath() -> String {
             switch self {
-            case .getEmail:
-                return "user/get_user_by_email"
-            case .getRecomendations:
-                return "user/get_recommendations"
             case .login:
                 return "user/userLogin"
             case .register:
-                return "/user/register"
+                return "user/register"
             case .getListUser(let userId, let roleId, let pageSize):
                 return "User/getUserList/\(userId)/\(roleId)/\(pageSize)"
-            case .updateCurrency:
-                return "/user/update_user_setting"
-            case .updateNotificationSetting:
-                return "/user/update_user_notification"
-            case .updatePayoutInfo:
-                return "/payment/insert_payout_method"
-            case .getTourisTransactionHistory(let userId, let offset, let pageSize):
-                return "/transactions/get_transactions_for_tourist/\(userId)/\(offset)/\(pageSize)"
-            case .getProviderTransactionHistory(let userId, let offset, let pageSize):
-                return "/transactions/get_transactions_for_provider/\(userId)/\(offset)/\(pageSize)"
-            case .feedback:
-                return "/user/send_feedback"
-            
+            case .addUserFavorite(let currentUserId, let favUserId):
+                return "User/addFavUser/\(currentUserId)/\(favUserId)"
+            case .removeUserFavorite(let currentUserId, let favUserId):
+                return "User/removeFavUser/\(currentUserId)/\(favUserId)"
+            case .getListFavoriteUser(let userId):
+                return "User/getFavUsers/\(userId)"
             }
         }
         
@@ -71,7 +55,5 @@ enum GiaSuAPI {
             return GiaSuAPI.properBaseURL + apiPath()
         }
     }
-    
-    
     
 }

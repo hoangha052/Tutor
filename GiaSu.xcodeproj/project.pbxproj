@@ -14,6 +14,10 @@
 		67057A581E8CA25300039756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67057A561E8CA25300039756 /* LaunchScreen.storyboard */; };
 		67057A631E8CA25300039756 /* GiaSuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67057A621E8CA25300039756 /* GiaSuTests.swift */; };
 		67057A6E1E8CA25300039756 /* GiaSuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67057A6D1E8CA25300039756 /* GiaSuUITests.swift */; };
+		67528BB31EC3094B00565896 /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67528BB21EC3094B00565896 /* DataObject.swift */; };
+		67528BB51EC30B2E00565896 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67528BB41EC30B2E00565896 /* SubjectViewController.swift */; };
+		67528BB91EC318D800565896 /* TreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67528BB71EC318D800565896 /* TreeTableViewCell.swift */; };
+		67528BBA1EC318D800565896 /* TreeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67528BB81EC318D800565896 /* TreeTableViewCell.xib */; };
 		676DFBF01E9BDBE2009DB6B0 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676DFBEF1E9BDBE2009DB6B0 /* FavoriteViewController.swift */; };
 		676DFBF21E9BDEBE009DB6B0 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676DFBF11E9BDEBE009DB6B0 /* ProfileDetailViewController.swift */; };
 		6779E4BE1EA1D2E9003AEC22 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6779E4BD1EA1D2E9003AEC22 /* UserResponse.swift */; };
@@ -97,6 +101,10 @@
 		67057A691E8CA25300039756 /* GiaSuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiaSuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67057A6D1E8CA25300039756 /* GiaSuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiaSuUITests.swift; sourceTree = "<group>"; };
 		67057A6F1E8CA25300039756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67528BB21EC3094B00565896 /* DataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
+		67528BB41EC30B2E00565896 /* SubjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
+		67528BB71EC318D800565896 /* TreeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTableViewCell.swift; sourceTree = "<group>"; };
+		67528BB81EC318D800565896 /* TreeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TreeTableViewCell.xib; sourceTree = "<group>"; };
 		676DFBEF1E9BDBE2009DB6B0 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		676DFBF11E9BDEBE009DB6B0 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		6779E4BD1EA1D2E9003AEC22 /* UserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
@@ -325,6 +333,8 @@
 		678FB6351E91E634002C2D73 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				67528BB71EC318D800565896 /* TreeTableViewCell.swift */,
+				67528BB81EC318D800565896 /* TreeTableViewCell.xib */,
 				678FB6361E91E634002C2D73 /* BaseTabBarController.swift */,
 				678FB6371E91E634002C2D73 /* PaddingLabel.swift */,
 				678FB6381E91E634002C2D73 /* PaddingTextField.swift */,
@@ -368,6 +378,7 @@
 		678FB64E1E91E634002C2D73 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				67528BB21EC3094B00565896 /* DataObject.swift */,
 				678FB6811E91E634002C2D73 /* User.swift */,
 				6779E4BD1EA1D2E9003AEC22 /* UserResponse.swift */,
 				679B5DB11EAB3B65001BDAD1 /* BaseResponse.swift */,
@@ -411,6 +422,7 @@
 			children = (
 				679B5DAD1EAB26B1001BDAD1 /* LoginViewController.swift */,
 				679B5DAF1EAB27E6001BDAD1 /* RegisterViewController.swift */,
+				67528BB41EC30B2E00565896 /* SubjectViewController.swift */,
 			);
 			path = Authen;
 			sourceTree = "<group>";
@@ -505,7 +517,7 @@
 				TargetAttributes = {
 					67057A491E8CA25300039756 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					67057A5D1E8CA25300039756 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -548,6 +560,7 @@
 				679B5DAB1EAB1FF3001BDAD1 /* Authen.storyboard in Resources */,
 				67057A551E8CA25300039756 /* Assets.xcassets in Resources */,
 				67057A531E8CA25300039756 /* Main.storyboard in Resources */,
+				67528BBA1EC318D800565896 /* TreeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +731,7 @@
 				678FB6E21E91E634002C2D73 /* UserProvider.swift in Sources */,
 				678FB69D1E91E634002C2D73 /* ArrayExtension.swift in Sources */,
 				678FB6A31E91E634002C2D73 /* UIColorExtension.swift in Sources */,
+				67528BB91EC318D800565896 /* TreeTableViewCell.swift in Sources */,
 				676DFBF21E9BDEBE009DB6B0 /* ProfileDetailViewController.swift in Sources */,
 				678FB6A71E91E634002C2D73 /* UITableViewExtension.swift in Sources */,
 				678FB6A81E91E634002C2D73 /* UITextViewExtension.swift in Sources */,
@@ -737,6 +751,7 @@
 				678FB6A91E91E634002C2D73 /* UIViewControllerExtension.swift in Sources */,
 				678FB6901E91E634002C2D73 /* ProfileInfoViewController.swift in Sources */,
 				6779E4BE1EA1D2E9003AEC22 /* UserResponse.swift in Sources */,
+				67528BB31EC3094B00565896 /* DataObject.swift in Sources */,
 				678FB6E71E91E634002C2D73 /* ReservationNetworkProvider.swift in Sources */,
 				678FB6E11E91E634002C2D73 /* NetworkConfigurations.swift in Sources */,
 				678FB68E1E91E634002C2D73 /* BaseViewController.swift in Sources */,
@@ -754,6 +769,7 @@
 				678FB6991E91E634002C2D73 /* PaddingLabel.swift in Sources */,
 				678FB6911E91E634002C2D73 /* AppearanceServices.swift in Sources */,
 				678FB6931E91E634002C2D73 /* MainServices.swift in Sources */,
+				67528BB51EC30B2E00565896 /* SubjectViewController.swift in Sources */,
 				678FB6A41E91E634002C2D73 /* UIImageExtension.swift in Sources */,
 				679B5DB21EAB3B65001BDAD1 /* BaseResponse.swift in Sources */,
 			);
@@ -906,10 +922,12 @@
 			baseConfigurationReference = 678BDAF08514BFDDE57B583E /* Pods-GiaSu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GiaSu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hoangha.GiaSu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -919,10 +937,12 @@
 			baseConfigurationReference = EB7202249F80AB619F9C92E2 /* Pods-GiaSu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GiaSu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hoangha.GiaSu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
