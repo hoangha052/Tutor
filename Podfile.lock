@@ -11,6 +11,9 @@ PODS:
   - SnapKit (3.2.0)
   - SVProgressHUD (2.1.2)
   - UIColor_Hex_Swift (2.1)
+  - YangMingShan (1.3.0):
+    - YangMingShan/YMSPhotoPicker (= 1.3.0)
+  - YangMingShan/YMSPhotoPicker (1.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
@@ -22,6 +25,7 @@ DEPENDENCIES:
   - SnapKit (~> 3.2.0)
   - SVProgressHUD (~> 2.1.2)
   - UIColor_Hex_Swift (from `https://github.com/yeahdongcn/UIColor-Hex-Swift.git`, branch `Swift-3.0`)
+  - YangMingShan
 
 EXTERNAL SOURCES:
   IQKeyboardManagerSwift:
@@ -50,7 +54,8 @@ SPEC CHECKSUMS:
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   UIColor_Hex_Swift: e91dc51f6bf252ec7bf74c8704ceedeeb7640c1c
+  YangMingShan: e8a558a783663360ef63f07ae6d1940a5a5ead69
 
-PODFILE CHECKSUM: 85a39dba41d52a616ac4e031438e976055a4a4f7
+PODFILE CHECKSUM: 0f992eb1122b76750188ea175d2cab6a8840cdc6
 
 COCOAPODS: 1.1.1

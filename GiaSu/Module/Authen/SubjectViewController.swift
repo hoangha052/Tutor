@@ -39,19 +39,7 @@ class SubjectViewController: BaseViewController, RATreeViewDelegate, RATreeViewD
     */
     
     func setupTreeView() -> Void {
-        
-        let nibCell = UINib.init(nibName: "TreeTableViewCell", bundle: nil)
-        
-        let tableView = UITableView.init(frame: CGRect.init(x: 10, y: 10, width: 300, height: 300))
-        tableView.register(nibCell, forCellReuseIdentifier: "TreeTableViewCell")
-        
-        let treeView = RATreeView(frame: view.bounds)
-        treeView.register(UINib(nibName: String(describing: TreeTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TreeTableViewCell.self))
-
-        
-        subjectTreeView.register(nibCell, forCellReuseIdentifier: "TreeTableViewCell")
-        
-        
+        subjectTreeView.register(UINib(nibName: String(describing: TreeTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TreeTableViewCell.self))
         subjectTreeView.delegate = self;
         subjectTreeView.dataSource = self;
         subjectTreeView.treeFooterView = UIView()

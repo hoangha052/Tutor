@@ -14,6 +14,7 @@
 		67057A581E8CA25300039756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67057A561E8CA25300039756 /* LaunchScreen.storyboard */; };
 		67057A631E8CA25300039756 /* GiaSuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67057A621E8CA25300039756 /* GiaSuTests.swift */; };
 		67057A6E1E8CA25300039756 /* GiaSuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67057A6D1E8CA25300039756 /* GiaSuUITests.swift */; };
+		670C364C1EC8B542001DA6AD /* RoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C364B1EC8B542001DA6AD /* RoleViewController.swift */; };
 		67528BB31EC3094B00565896 /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67528BB21EC3094B00565896 /* DataObject.swift */; };
 		67528BB51EC30B2E00565896 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67528BB41EC30B2E00565896 /* SubjectViewController.swift */; };
 		67528BB91EC318D800565896 /* TreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67528BB71EC318D800565896 /* TreeTableViewCell.swift */; };
@@ -21,6 +22,7 @@
 		676DFBF01E9BDBE2009DB6B0 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676DFBEF1E9BDBE2009DB6B0 /* FavoriteViewController.swift */; };
 		676DFBF21E9BDEBE009DB6B0 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676DFBF11E9BDEBE009DB6B0 /* ProfileDetailViewController.swift */; };
 		6779E4BE1EA1D2E9003AEC22 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6779E4BD1EA1D2E9003AEC22 /* UserResponse.swift */; };
+		678B2BB41EC89FDB00BF2DD4 /* ExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B2BB31EC89FDB00BF2DD4 /* ExperienceViewController.swift */; };
 		678FB68E1E91E634002C2D73 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6241E91E634002C2D73 /* BaseViewController.swift */; };
 		678FB68F1E91E634002C2D73 /* PageHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6271E91E634002C2D73 /* PageHomeViewController.swift */; };
 		678FB6901E91E634002C2D73 /* ProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6281E91E634002C2D73 /* ProfileInfoViewController.swift */; };
@@ -101,6 +103,7 @@
 		67057A691E8CA25300039756 /* GiaSuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiaSuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67057A6D1E8CA25300039756 /* GiaSuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiaSuUITests.swift; sourceTree = "<group>"; };
 		67057A6F1E8CA25300039756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		670C364B1EC8B542001DA6AD /* RoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleViewController.swift; sourceTree = "<group>"; };
 		67528BB21EC3094B00565896 /* DataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
 		67528BB41EC30B2E00565896 /* SubjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
 		67528BB71EC318D800565896 /* TreeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTableViewCell.swift; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 		676DFBEF1E9BDBE2009DB6B0 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		676DFBF11E9BDEBE009DB6B0 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		6779E4BD1EA1D2E9003AEC22 /* UserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		678B2BB31EC89FDB00BF2DD4 /* ExperienceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceViewController.swift; sourceTree = "<group>"; };
 		678BDAF08514BFDDE57B583E /* Pods-GiaSu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiaSu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiaSu/Pods-GiaSu.debug.xcconfig"; sourceTree = "<group>"; };
 		678FB6241E91E634002C2D73 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		678FB6271E91E634002C2D73 /* PageHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageHomeViewController.swift; sourceTree = "<group>"; };
@@ -423,6 +427,8 @@
 				679B5DAD1EAB26B1001BDAD1 /* LoginViewController.swift */,
 				679B5DAF1EAB27E6001BDAD1 /* RegisterViewController.swift */,
 				67528BB41EC30B2E00565896 /* SubjectViewController.swift */,
+				678B2BB31EC89FDB00BF2DD4 /* ExperienceViewController.swift */,
+				670C364B1EC8B542001DA6AD /* RoleViewController.swift */,
 			);
 			path = Authen;
 			sourceTree = "<group>";
@@ -728,6 +734,7 @@
 				678FB6A21E91E634002C2D73 /* UICollectionViewExtension.swift in Sources */,
 				678FB6941E91E634002C2D73 /* NotificationServices.swift in Sources */,
 				678FB69F1E91E634002C2D73 /* EncoderExtension.swift in Sources */,
+				670C364C1EC8B542001DA6AD /* RoleViewController.swift in Sources */,
 				678FB6E21E91E634002C2D73 /* UserProvider.swift in Sources */,
 				678FB69D1E91E634002C2D73 /* ArrayExtension.swift in Sources */,
 				678FB6A31E91E634002C2D73 /* UIColorExtension.swift in Sources */,
@@ -745,6 +752,7 @@
 				678FB6A61E91E634002C2D73 /* UIStoryboardExtension.swift in Sources */,
 				678FB68F1E91E634002C2D73 /* PageHomeViewController.swift in Sources */,
 				678FB69B1E91E634002C2D73 /* ProviderTabBarViewController.swift in Sources */,
+				678B2BB41EC89FDB00BF2DD4 /* ExperienceViewController.swift in Sources */,
 				678FB6921E91E634002C2D73 /* FacebookHandlerServices.swift in Sources */,
 				678FB6E61E91E634002C2D73 /* OfferNetworkProvider.swift in Sources */,
 				678FB6A11E91E634002C2D73 /* StringExtension.swift in Sources */,

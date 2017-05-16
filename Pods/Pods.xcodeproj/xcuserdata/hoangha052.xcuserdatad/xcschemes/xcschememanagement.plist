@@ -69,15 +69,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>YangMingShan.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
+		<key>0B1AF32FA775FABE902F9F38F10A6634</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>36A66DBEE24509B2F7F6ADB21B3D7F1C</key>
+		<key>13388F9B5B48AA4B77EC5997E091009B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,7 +107,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5E1ED5201B88EC4372E18B9295FC46CD</key>
+		<key>6D5750BCA2E47CED06BA62EC8F4858B5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E4F5A4822D33ABB767486E6BFE69963</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,17 +137,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB804F91E28EB2CB89EF460B9003AD9B</key>
+		<key>CF155AB50C253694BB3ED035CDA2D01D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F3FEB201EFED6761E4CFFBFF23AD3CB4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F7283604B8874FD6CF593F107E824581</key>
+		<key>FA796418BBC4399FC5C18161D3EB7581</key>
 		<dict>
 			<key>primary</key>
 			<true/>

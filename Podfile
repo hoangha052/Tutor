@@ -16,8 +16,8 @@ target 'GiaSu' do
     pod 'SVProgressHUD', '~> 2.1.2'
     pod 'UIColor_Hex_Swift', :git => 'https://github.com/yeahdongcn/UIColor-Hex-Swift.git', :branch => 'Swift-3.0'
     pod 'RATreeView', '~> 2.1.2'
+    pod 'YangMingShan'
     
-
   target 'GiaSuTests' do
     inherit! :search_paths
     # Pods for testing
