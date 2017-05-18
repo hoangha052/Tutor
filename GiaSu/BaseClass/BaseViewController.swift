@@ -20,6 +20,19 @@ class BaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func gotoMainView() {
+        let window: UIWindow = getWindow()
+        let mainController = UIStoryboard.tnr_createViewController(storyboardName: "Main")
+        window.rootViewController = mainController
+    }
+
+    func getWindow() -> UIWindow{
+        guard let window = UIApplication.shared.keyWindow else {
+            return UIApplication.shared.windows.last!
+        }
+        
+        return window
+    }
 
 }
 

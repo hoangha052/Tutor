@@ -21,6 +21,9 @@ class ExperienceViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func nextButtonClick(_ sender: Any) {
+        self.gotoMainView()
+    }
 
     /*
     // MARK: - Navigation

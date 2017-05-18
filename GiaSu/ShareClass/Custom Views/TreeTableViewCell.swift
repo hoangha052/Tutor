@@ -52,6 +52,8 @@ class TreeTableViewCell : UITableViewCell {
         self.detailsLabel.frame.origin.x = left
     }
 
+    @IBAction func selectButtonClick(_ sender: Any) {
+    }
     func additionButtonTapped(_ sender : AnyObject) -> Void {
         if let action = additionButtonActionBlock {
             action(self)

@@ -18,9 +18,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="5Fv-ZW-F0k" userLabel="Addition button">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5Fv-ZW-F0k" userLabel="Addition button">
                         <rect key="frame" x="289" y="11" width="22" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" backgroundImage="ic_check"/>
+                        <connections>
+                            <action selector="selectButtonClick:" destination="-1" eventType="touchUpInside" id="t9K-0v-Bqo"/>
+                        </connections>
                     </button>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example text here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rMm-gk-ZJo">
                         <rect key="frame" x="10" y="22" width="261" height="21"/>
@@ -45,6 +49,9 @@
             <point key="canvasLocation" x="263" y="255"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ic_check" width="38" height="38"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

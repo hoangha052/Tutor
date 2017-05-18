@@ -302,7 +302,7 @@
         <!--Subject View Controller-->
         <scene sceneID="CxJ-lc-qrS">
             <objects>
-                <viewController id="GXw-0q-dwY" customClass="SubjectViewController" customModule="GiaSu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="GXw-0q-dwY" customClass="SubjectViewController" customModule="GiaSu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="etd-2r-9AX"/>
                         <viewControllerLayoutGuide type="bottom" id="Lyj-ej-WKg"/>
@@ -311,9 +311,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uZL-VV-Pgc" customClass="RATreeView">
-                                <rect key="frame" x="0.0" y="340" width="375" height="327"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZL-VV-Pgc" customClass="RATreeView">
+                                <rect key="frame" x="0.0" y="145" width="375" height="522"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATI-cg-1Jl">
@@ -327,9 +326,8 @@
                                     <segue destination="k1T-A3-jLv" kind="push" id="DeJ-jV-Y66"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subjects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQD-Rn-i0L">
-                                <rect key="frame" x="119" y="54" width="137" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subjects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQD-Rn-i0L">
+                                <rect key="frame" x="154" y="94" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -337,8 +335,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="uZL-VV-Pgc" firstAttribute="leading" secondItem="dRl-0B-K7g" secondAttribute="leading" id="2m3-O7-6CV"/>
+                            <constraint firstAttribute="trailing" secondItem="uZL-VV-Pgc" secondAttribute="trailing" id="7wc-DC-j59"/>
                             <constraint firstAttribute="trailing" secondItem="ATI-cg-1Jl" secondAttribute="trailing" constant="15" id="Brn-nQ-6LJ"/>
+                            <constraint firstItem="JQD-Rn-i0L" firstAttribute="centerX" secondItem="dRl-0B-K7g" secondAttribute="centerX" id="QUN-IB-n3F"/>
+                            <constraint firstItem="Lyj-ej-WKg" firstAttribute="top" secondItem="uZL-VV-Pgc" secondAttribute="bottom" id="Xdb-7a-4mh"/>
                             <constraint firstItem="Lyj-ej-WKg" firstAttribute="top" secondItem="ATI-cg-1Jl" secondAttribute="bottom" constant="40" id="amo-0o-Q0T"/>
+                            <constraint firstItem="JQD-Rn-i0L" firstAttribute="top" secondItem="etd-2r-9AX" secondAttribute="bottom" constant="30" id="fOD-uD-bs8"/>
+                            <constraint firstItem="uZL-VV-Pgc" firstAttribute="top" secondItem="JQD-Rn-i0L" secondAttribute="bottom" constant="30" id="nuU-wm-mYH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AyG-91-JjR"/>
@@ -384,14 +388,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cDH-ZW-2oe">
-                                <rect key="frame" x="12" y="217" width="363" height="450"/>
+                                <rect key="frame" x="0.0" y="217" width="375" height="292"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15$" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pY0-Ic-Nhm">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pY0-Ic-Nhm">
                                 <rect key="frame" x="165" y="97" width="194" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -405,6 +408,9 @@
                                     <constraint firstAttribute="height" constant="50" id="Woz-Vi-goB"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="ic_next"/>
+                                <connections>
+                                    <action selector="nextButtonClick:" destination="k1T-A3-jLv" eventType="touchUpInside" id="xXG-LG-XBV"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="7 - 8H PM" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YTd-nY-xuF">
                                 <rect key="frame" x="165" y="139" width="194" height="30"/>
