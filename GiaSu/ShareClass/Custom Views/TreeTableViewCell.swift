@@ -11,27 +11,47 @@ import UIKit
 enum ProjectType: Int {
     case rootLevel = 0
     case subLevel
+    case expanded
     
 }
 
 class TreeTableViewCell : UITableViewCell {
 
-    @IBOutlet private weak var additionalButton: UIButton!
-    @IBOutlet private weak var detailsLabel: UILabel!
     @IBOutlet private weak var customTitleLabel: UILabel!
+    @IBOutlet weak var imageCell: UIImageView!
+    @IBOutlet weak var trailingConstraintLabel: NSLayoutConstraint!
+    
 
     var projectData: Project?
     var subProjectData: SubProject?
     var cellType: ProjectType = .rootLevel
-    private var additionalButtonHidden : Bool {
-        get {
-            return additionalButton.isHidden;
+
+    var isSelectedCell: Bool = false {
+        willSet {
+            // Print current value.
+            print("willSet")
         }
-        set {
-            additionalButton.isHidden = newValue;
+        didSet {
+            // Print both oldValue and present value.
+            print("didSet")
+            var imageName = "ic_row_right"
+            switch self.cellType {
+            case .rootLevel:
+                imageName = "ic_row_right"
+                break
+            case .subLevel:
+                imageName = isSelectedCell ? "ic_check" : "ic_check_white"
+                break
+            case .expanded:
+                imageName = "ic_row_dow"
+                break
+                
+            }
+            self.imageCell.image = UIImage.init(named: imageName)
+
         }
     }
-
+    
     override func awakeFromNib() {
         selectedBackgroundView? = UIView()
         selectedBackgroundView?.backgroundColor = .clear
@@ -39,27 +59,6 @@ class TreeTableViewCell : UITableViewCell {
 
     var additionButtonActionBlock : ((TreeTableViewCell) -> Void)?;
 
-    func setup(withTitle title: String, detailsText: String, level : Int, additionalButtonHidden: Bool) {
-        customTitleLabel.text = title
-        detailsLabel.text = detailsText
-        self.additionalButtonHidden = additionalButtonHidden
-
-        let backgroundColor: UIColor
-        if level == 0 {
-            backgroundColor = UIColor(red: 247.0/255.0, green: 247.0/255.0, blue: 247.0/255.0, alpha: 1.0)
-        } else if level == 1 {
-            backgroundColor = UIColor(red: 209.0/255.0, green: 238.0/255.0, blue: 252.0/255.0, alpha: 1.0)
-        } else {
-            backgroundColor = UIColor(red: 224.0/255.0, green: 248.0/255.0, blue: 216.0/255.0, alpha: 1.0)
-        }
-        
-        self.backgroundColor = backgroundColor
-        self.contentView.backgroundColor = backgroundColor
-
-        let left = 11.0 + 20.0 * CGFloat(level)
-        self.customTitleLabel.frame.origin.x = left
-        self.detailsLabel.frame.origin.x = left
-    }
 
     @IBAction func selectButtonClick(_ sender: Any) {
     }
@@ -69,16 +68,16 @@ class TreeTableViewCell : UITableViewCell {
         }
     }
 
-    func configRootCell(_ project: Project) {
-        self.customTitleLabel.text = project.subject!
-        self.projectData = project
-    }
-    
-    func configSubCell(_ subProject: SubProject) {
-        self.customTitleLabel.text = subProject.level!
-        self.subProjectData = subProject
-        self.cellType = .subLevel
-    }
+//    func configRootCell(_ project: Project) {
+//        self.customTitleLabel.text = project.subject!
+//        self.projectData = project
+//    }
+//    
+//    func configSubCell(_ subProject: SubProject) {
+//        self.customTitleLabel.text = subProject.level!
+//        self.subProjectData = subProject
+//        self.cellType = .subLevel
+//    }
     
     func configCell(_ data : AnyObject) {
         if let project = data as? Project {
@@ -90,6 +89,25 @@ class TreeTableViewCell : UITableViewCell {
             self.customTitleLabel.text = subProject.level!
             self.subProjectData = subProject
             self.cellType = .subLevel
-        }
+            self.trailingConstraintLabel.constant = 20
+        }   
     }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        var imageName = "ic_row_right"
+        switch self.cellType {
+        case .rootLevel:
+            imageName = "ic_row_right"
+            break
+        case .subLevel:
+            imageName = selected ? "ic_check" : "ic_check_white"
+            break
+        case .expanded:
+            imageName = "ic_row_dow"
+            break
+
+        }
+        self.imageCell.image = UIImage.init(named: imageName)
+    }
+    
 }

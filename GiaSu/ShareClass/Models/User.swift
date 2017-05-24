@@ -9,20 +9,26 @@
 import Foundation
 import Gloss
 
-final class User: NSObject, Decodable {
+final class User: NSObject, Decodable, Encodable {
     var userId: Int?
     var username: String?
-    var clientKey: String?
-    var accessToken: String?
     var email: String?
     var phone: String?
     var avatar: String?
     var userRoleId: Int?
     var isActive: Bool?
+    var descriptionStr: String?
+    var imageProfile: UIImage?
+    var password: String?
+    var address: String?
+    var price: String?
+    
+    
+    var clientKey: String?
+    var accessToken: String?
     var name: String?
     var paypalEmail: String?
-    var descriptionStr: String?
-    
+
     
     init?(json: JSON) {
         self.userId = "Id" <~~ json
@@ -38,8 +44,29 @@ final class User: NSObject, Decodable {
         self.descriptionStr = "description" <~~ json
     }
     
+    func toJSON() -> JSON? {
+        
+        return jsonify([
+            "username" ~~> self.username,
+            "userRole" ~~> self.userRoleId,
+            "salary" ~~> self.price,
+            "expericence" ~~> "4",
+            "degree" ~~> "Senior",
+            "phoneNo" ~~> self.phone,
+            "description" ~~> self.descriptionStr,
+            "sex" ~~> "1",
+            "school" ~~> "HUI University",
+            "subjectLevelList" ~~> "1-6"
+            ])
+    }
+
+    
     init(userId: Int) {
         self.userId =  userId
+    }
+    
+    init(roleId: Int) {
+        self.userRoleId = roleId
     }
     
     init?(coder aDecoder: NSCoder) {

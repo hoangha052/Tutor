@@ -26,6 +26,12 @@ class BaseViewController: UIViewController {
         window.rootViewController = mainController
     }
 
+    func loginSuccess () {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let vc = UIStoryboard.tnr_createViewController(storyboardName: "Main")
+        delegate.window?.rootViewController = vc
+    }
+    
     func getWindow() -> UIWindow{
         guard let window = UIApplication.shared.keyWindow else {
             return UIApplication.shared.windows.last!
@@ -34,5 +40,6 @@ class BaseViewController: UIViewController {
         return window
     }
 
+    
 }
 

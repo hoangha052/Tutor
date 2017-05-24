@@ -22,11 +22,16 @@ class RoleViewController: BaseViewController {
     }
     
     @IBAction func teacherButtonClick(_ sender: Any) {
+        let registerUser = User.init(roleId: 0)
+        UserManager.sharedInstance.loggedInUser = registerUser
         self.performSegue(withIdentifier: "UserInfoSegue", sender: nil)
     }
 
     @IBAction func studentButtonClick(_ sender: Any) {
-                self.performSegue(withIdentifier: "UserInfoSegue", sender: nil)
+        let registerUser = User.init(roleId: 1)
+        UserManager.sharedInstance.loggedInUser = registerUser
+        
+        self.performSegue(withIdentifier: "UserInfoSegue", sender: nil)
     }
     /*
     // MARK: - Navigation

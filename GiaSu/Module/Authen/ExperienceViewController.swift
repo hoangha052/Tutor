@@ -9,6 +9,9 @@
 import UIKit
 
 class ExperienceViewController: BaseViewController {
+    @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet weak var timeTextField: UITextField!
+    @IBOutlet weak var introduceTextView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +25,22 @@ class ExperienceViewController: BaseViewController {
     }
     
     @IBAction func nextButtonClick(_ sender: Any) {
-        self.gotoMainView()
+       let userRegister = UserManager.sharedInstance.loggedInUser
+        userRegister?.price = priceTextField.text!
+        userRegister?.descriptionStr = introduceTextView.text!
+        self.registerUser(userData: userRegister!)
     }
 
+    func registerUser(userData: User) {
+        UserProvider().registerUser(userRegister: userData) { (response) in
+            if let userValue = response?.userData  {
+                UserManager.sharedInstance.saveUser(userValue)
+                self.gotoMainView()
+            }
+
+        }
+
+    }
     /*
     // MARK: - Navigation
 

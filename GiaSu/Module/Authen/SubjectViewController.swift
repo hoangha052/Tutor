@@ -1,4 +1,4 @@
-//
+ //
 //  SubjectViewController.swift
 //  GiaSu
 //
@@ -63,10 +63,12 @@ class SubjectViewController: BaseViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! TreeTableViewCell
+        if cell.cellType == .expanded { return }
         if cell.cellType == .rootLevel {
+            cell.cellType = .expanded
             var indexPaths: [IndexPath] = []
             for  i in 0 ... Int((cell.projectData?.levels?.count)!) - 1  {
-                self.data.insert((cell.projectData?.levels?[i])!, at: indexPath.row + i)
+                self.data.insert((cell.projectData?.levels?[i])!, at: indexPath.row + i + 1)
                 indexPaths.append(IndexPath.init(row: indexPath.row + i + 1, section: 0))
             }
             tableView.beginUpdates()
@@ -75,6 +77,7 @@ class SubjectViewController: BaseViewController, UITableViewDelegate, UITableVie
         } else {
             print("subLevel")
         }
+        cell.isSelectedCell = !cell.isSelectedCell
     }
 
 }

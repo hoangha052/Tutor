@@ -48,11 +48,6 @@ class LoginViewController: BaseViewController {
     @IBAction func registerButtonClick(_ sender: Any) {
     }
 
-    func loginSuccess () {
-        let delegate = UIApplication.shared.delegate as! AppDelegate
-        let vc = UIStoryboard.tnr_createViewController(storyboardName: "Main")
-        delegate.window?.rootViewController = vc
-    }
     
     /*
     // MARK: - Navigation

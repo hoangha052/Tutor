@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,39 +19,36 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5Fv-ZW-F0k" userLabel="Addition button">
-                        <rect key="frame" x="289" y="11" width="22" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" backgroundImage="ic_check"/>
-                        <connections>
-                            <action selector="selectButtonClick:" destination="-1" eventType="touchUpInside" id="t9K-0v-Bqo"/>
-                        </connections>
-                    </button>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example text here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rMm-gk-ZJo">
-                        <rect key="frame" x="10" y="22" width="261" height="21"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="csr-Kq-yjj">
-                        <rect key="frame" x="10" y="5" width="261" height="21"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csr-Kq-yjj">
+                        <rect key="frame" x="13" y="11" width="98" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_row_right" translatesAutoresizingMaskIntoConstraints="NO" id="ghE-ad-vJD">
+                        <rect key="frame" x="290" y="12" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="lJO-di-nYM"/>
+                            <constraint firstAttribute="height" constant="20" id="nO4-5u-00G"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ghE-ad-vJD" secondAttribute="trailing" constant="10" id="EdU-He-AMl"/>
+                    <constraint firstItem="csr-Kq-yjj" firstAttribute="centerY" secondItem="9qR-gl-T8Y" secondAttribute="centerY" id="QSz-ZI-yck"/>
+                    <constraint firstItem="csr-Kq-yjj" firstAttribute="leading" secondItem="9qR-gl-T8Y" secondAttribute="leadingMargin" constant="5" id="Ytc-va-bDW"/>
+                    <constraint firstItem="ghE-ad-vJD" firstAttribute="centerY" secondItem="9qR-gl-T8Y" secondAttribute="centerY" id="gfX-jF-nBp"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="additionalButton" destination="5Fv-ZW-F0k" id="B4s-i4-Vi6"/>
                 <outlet property="customTitleLabel" destination="csr-Kq-yjj" id="hHJ-3s-jYA"/>
-                <outlet property="detailsLabel" destination="rMm-gk-ZJo" id="IhS-fV-gIv"/>
+                <outlet property="imageCell" destination="ghE-ad-vJD" id="3W2-hR-gyv"/>
+                <outlet property="trailingConstraintLabel" destination="Ytc-va-bDW" id="e9t-7O-ZwF"/>
             </connections>
             <point key="canvasLocation" x="263" y="255"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_check" width="38" height="38"/>
+        <image name="ic_row_right" width="8" height="12"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

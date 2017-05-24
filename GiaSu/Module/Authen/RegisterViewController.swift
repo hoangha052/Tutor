@@ -31,16 +31,27 @@ class RegisterViewController: BaseViewController, YMSPhotoPickerViewControllerDe
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func nextButtonClick(_ sender: Any) {
+        let user = UserManager.sharedInstance.loggedInUser
+        user?.email =  emailTextField.text!
+        user?.password = passwordTextField.text!
+        user?.phone = phoneTextField.text!
+        user?.address = addressTextField.text!
+        user?.username = nameTextField.text!
+        UserManager.sharedInstance.loggedInUser = user
+        self.performSegue(withIdentifier: "SelectSubjectSegue", sender: nil)
+    }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
     }
-    */
+ 
     
     // MARK: - YMSPhotoPickerViewControllerDelegate
     func showImageSelectPicker(_ sender: UITapGestureRecognizer) {
@@ -84,6 +95,7 @@ class RegisterViewController: BaseViewController, YMSPhotoPickerViewControllerDe
     func photoPickerViewController(_ picker: YMSPhotoPickerViewController!, didFinishPicking image: UIImage!) {
         picker.dismiss(animated: true) { 
             self.profileImageView.image = image
+            UserManager.sharedInstance.loggedInUser?.imageProfile = image
         }
         
     }

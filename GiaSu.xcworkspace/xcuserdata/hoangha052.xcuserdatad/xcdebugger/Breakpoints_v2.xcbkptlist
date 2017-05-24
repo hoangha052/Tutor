@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GiaSu/Module/Authen/ExperienceViewController.swift"
+            timestampString = "517343543.044468"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "registerUser(userData:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GiaSu.ExperienceViewController.registerUser (userData : GiaSu.User) -&gt; ()"
+                  moduleName = "GiaSu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoangha052/Documents/PraticeProject/GiaSuData/GiaSu/GiaSu/Module/Authen/ExperienceViewController.swift"
+                  timestampString = "517343888.549982"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GiaSu.ExperienceViewController.(registerUser (userData : GiaSu.User) -&gt; ()).(closure #1)"
+                  moduleName = "GiaSu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoangha052/Documents/PraticeProject/GiaSuData/GiaSu/GiaSu/Module/Authen/ExperienceViewController.swift"
+                  timestampString = "517343888.553571"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

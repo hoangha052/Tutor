@@ -63,16 +63,18 @@ class UserProvider {
     }
     
     func getListFavoriteUser(_ completionHandler: @escaping(UserResponse?) -> ())  {
-        let userData = UserManager.sharedInstance.getUser()
-        let listFavoriteUrl = GiaSuAPI.User.getListFavoriteUser(15).urlString()
         
-        NetworkProvider().get(listFavoriteUrl, params:nil) { (responseObject, error) in
+        let registerURL = GiaSuAPI.User.register.urlString()
+        
+        NetworkProvider().get(registerURL, params:nil) { (responseObject, error) in
             if let response = responseObject as? JSON {
                 let user = UserResponse.init(listUserJson: response)
                 completionHandler(user)
             }
         }
     }
+    
+
     
     func getListProject(completionHandler: @escaping(ProjectResponse?) -> ())  {
         let getAllUserURL = GiaSuAPI.User.getListSubject().urlString()
@@ -85,14 +87,17 @@ class UserProvider {
         }
     }
     
-//    static func addSoccerQuestion(match: String, callback: @escaping (_ result: UserResponse?)->()){
-//        
-//        
-//        let URL = "fsdf"
-//        print(URL)
-//        
-//        Alamofire.request(URL, method: .post, parameters: nil, headers: nil).responseObject { (response: DataResponse<UserResponse>) in
-//            callback(response.result.value)
-//        }
-//    }
+    func registerUser(userRegister: User, completionHandler: @escaping(UserResponse?) -> ())  {
+        
+        let registerURL = GiaSuAPI.User.register.urlString()
+        NetworkProvider().postDataWithMultipart(registerURL, imageData: [userRegister.imageProfile!], params: userRegister.toJSON() as! [String : AnyObject]) { (responseObject, error) in
+            if let response = responseObject as? JSON {
+                let user = UserResponse.init(listUserJson: response)
+                completionHandler(user)
+            }
+        }
+        
+    }
+    
+
 }
