@@ -8,12 +8,21 @@
 
 import UIKit
 
+enum ProjectType: Int {
+    case rootLevel = 0
+    case subLevel
+    
+}
+
 class TreeTableViewCell : UITableViewCell {
 
     @IBOutlet private weak var additionalButton: UIButton!
     @IBOutlet private weak var detailsLabel: UILabel!
     @IBOutlet private weak var customTitleLabel: UILabel!
 
+    var projectData: Project?
+    var subProjectData: SubProject?
+    var cellType: ProjectType = .rootLevel
     private var additionalButtonHidden : Bool {
         get {
             return additionalButton.isHidden;
@@ -60,4 +69,27 @@ class TreeTableViewCell : UITableViewCell {
         }
     }
 
+    func configRootCell(_ project: Project) {
+        self.customTitleLabel.text = project.subject!
+        self.projectData = project
+    }
+    
+    func configSubCell(_ subProject: SubProject) {
+        self.customTitleLabel.text = subProject.level!
+        self.subProjectData = subProject
+        self.cellType = .subLevel
+    }
+    
+    func configCell(_ data : AnyObject) {
+        if let project = data as? Project {
+            self.customTitleLabel.text = project.subject!
+            self.projectData = project
+            self.cellType = ((project.levels?.count)! > 0) ? ProjectType.rootLevel : ProjectType.subLevel
+        } else {
+            let subProject = data as! SubProject
+            self.customTitleLabel.text = subProject.level!
+            self.subProjectData = subProject
+            self.cellType = .subLevel
+        }
+    }
 }

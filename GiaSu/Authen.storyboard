@@ -311,10 +311,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZL-VV-Pgc" customClass="RATreeView">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PiL-jB-91U">
                                 <rect key="frame" x="0.0" y="145" width="375" height="522"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="GXw-0q-dwY" id="EhZ-Pq-q6p"/>
+                                    <outlet property="delegate" destination="GXw-0q-dwY" id="24g-Ip-MNK"/>
+                                </connections>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATI-cg-1Jl">
                                 <rect key="frame" x="310" y="577" width="50" height="50"/>
                                 <constraints>
@@ -335,19 +339,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uZL-VV-Pgc" firstAttribute="leading" secondItem="dRl-0B-K7g" secondAttribute="leading" id="2m3-O7-6CV"/>
-                            <constraint firstAttribute="trailing" secondItem="uZL-VV-Pgc" secondAttribute="trailing" id="7wc-DC-j59"/>
                             <constraint firstAttribute="trailing" secondItem="ATI-cg-1Jl" secondAttribute="trailing" constant="15" id="Brn-nQ-6LJ"/>
                             <constraint firstItem="JQD-Rn-i0L" firstAttribute="centerX" secondItem="dRl-0B-K7g" secondAttribute="centerX" id="QUN-IB-n3F"/>
-                            <constraint firstItem="Lyj-ej-WKg" firstAttribute="top" secondItem="uZL-VV-Pgc" secondAttribute="bottom" id="Xdb-7a-4mh"/>
+                            <constraint firstAttribute="trailing" secondItem="PiL-jB-91U" secondAttribute="trailing" id="REd-pO-qoy"/>
+                            <constraint firstItem="Lyj-ej-WKg" firstAttribute="top" secondItem="PiL-jB-91U" secondAttribute="bottom" id="ZFj-Pm-SSq"/>
                             <constraint firstItem="Lyj-ej-WKg" firstAttribute="top" secondItem="ATI-cg-1Jl" secondAttribute="bottom" constant="40" id="amo-0o-Q0T"/>
                             <constraint firstItem="JQD-Rn-i0L" firstAttribute="top" secondItem="etd-2r-9AX" secondAttribute="bottom" constant="30" id="fOD-uD-bs8"/>
-                            <constraint firstItem="uZL-VV-Pgc" firstAttribute="top" secondItem="JQD-Rn-i0L" secondAttribute="bottom" constant="30" id="nuU-wm-mYH"/>
+                            <constraint firstItem="PiL-jB-91U" firstAttribute="leading" secondItem="dRl-0B-K7g" secondAttribute="leading" id="gYf-aB-yR1"/>
+                            <constraint firstItem="PiL-jB-91U" firstAttribute="top" secondItem="JQD-Rn-i0L" secondAttribute="bottom" constant="30" id="odM-uT-g33"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AyG-91-JjR"/>
                     <connections>
-                        <outlet property="subjectTreeView" destination="uZL-VV-Pgc" id="C9j-Pw-Qpo"/>
+                        <outlet property="subjectTableView" destination="PiL-jB-91U" id="eub-oz-WRP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ue8-MK-eks" userLabel="First Responder" sceneMemberID="firstResponder"/>

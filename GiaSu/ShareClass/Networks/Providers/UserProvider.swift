@@ -24,19 +24,6 @@ class UserProvider {
                 }
         }
     }
-//
-//    func getUserDetail(completionHandler: @escaping(UserResponse?) -> ())  {
-//        let insertTripProfileUrl = TinryAPI.User.insertTripProfile.urlString()
-//        NetworkProvider().put(insertTripProfileUrl, params: nil) { (responseObject, error) in
-//            let user: UserResponse?
-//            if let response = responseObject {
-//                user = UserResponse.init(map: Map.init(mappingType: .fromJSON, JSON: response as! [String : Any]))
-//            } else {
-//                user = UserResponse.init(httpError: error!)
-//            }
-//            completionHandler(user)
-//        }
-//    }
     
     func userLogin(userName: String, password: String, completionHandler: @escaping(UserResponse?) -> ())  {
         let loginUrl = GiaSuAPI.User.login.urlString()
@@ -83,6 +70,17 @@ class UserProvider {
             if let response = responseObject as? JSON {
                 let user = UserResponse.init(listUserJson: response)
                 completionHandler(user)
+            }
+        }
+    }
+    
+    func getListProject(completionHandler: @escaping(ProjectResponse?) -> ())  {
+        let getAllUserURL = GiaSuAPI.User.getListSubject().urlString()
+        NetworkProvider().get(getAllUserURL, params: nil) { (responseObject, error) in
+            let project: ProjectResponse?
+            if let response = responseObject as? JSON {
+                project = ProjectResponse.init(json: response)
+                completionHandler(project)
             }
         }
     }

@@ -10,7 +10,7 @@ import Foundation
 
 enum GiaSuAPI {
         
-    private static let properBaseURL = "http://serapi.azurewebsites.net/api/"
+    private static let properBaseURL = "http://ec2-13-58-134-132.us-east-2.compute.amazonaws.com:2269/api/"
     private static let stagingImageBaseUrl = "http://5.9.155.139:32138"
     
     private static let productionBaseURL = "http://5.9.155.139:32138/api/"
@@ -33,6 +33,7 @@ enum GiaSuAPI {
         case addUserFavorite(Int, Int)
         case removeUserFavorite(Int, Int)
         case getListFavoriteUser(Int)
+        case getListSubject()
         
         fileprivate func apiPath() -> String {
             switch self {
@@ -48,6 +49,8 @@ enum GiaSuAPI {
                 return "User/removeFavUser/\(currentUserId)/\(favUserId)"
             case .getListFavoriteUser(let userId):
                 return "User/getFavUsers/\(userId)"
+            case .getListSubject():
+                return "subject/getSubjectLevel"
             }
         }
         

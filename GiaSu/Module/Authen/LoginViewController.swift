@@ -38,7 +38,7 @@ class LoginViewController: BaseViewController {
     @IBAction func loginButtonClick(_ sender: Any) {
         UserProvider().userLogin(userName: userNameTextField.text!, password: passwordTextField.text!) { (response) in
             if let userValue = response?.userData  {
-//                UserManager.sharedInstance.saveUser(userValue)
+                UserManager.sharedInstance.saveUser(userValue)
 //                print("userData", userValue)
                 self.loginSuccess()
             }

@@ -15,6 +15,9 @@
 		67057A631E8CA25300039756 /* GiaSuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67057A621E8CA25300039756 /* GiaSuTests.swift */; };
 		67057A6E1E8CA25300039756 /* GiaSuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67057A6D1E8CA25300039756 /* GiaSuUITests.swift */; };
 		670C364C1EC8B542001DA6AD /* RoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C364B1EC8B542001DA6AD /* RoleViewController.swift */; };
+		675217AF1ED4929F00EADB09 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675217AE1ED4929F00EADB09 /* Project.swift */; };
+		675217B11ED4939000EADB09 /* SubProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675217B01ED4939000EADB09 /* SubProject.swift */; };
+		675217B31ED4957A00EADB09 /* ProjectResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675217B21ED4957A00EADB09 /* ProjectResponse.swift */; };
 		67528BB31EC3094B00565896 /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67528BB21EC3094B00565896 /* DataObject.swift */; };
 		67528BB51EC30B2E00565896 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67528BB41EC30B2E00565896 /* SubjectViewController.swift */; };
 		67528BB91EC318D800565896 /* TreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67528BB71EC318D800565896 /* TreeTableViewCell.swift */; };
@@ -104,6 +107,9 @@
 		67057A6D1E8CA25300039756 /* GiaSuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiaSuUITests.swift; sourceTree = "<group>"; };
 		67057A6F1E8CA25300039756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		670C364B1EC8B542001DA6AD /* RoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleViewController.swift; sourceTree = "<group>"; };
+		675217AE1ED4929F00EADB09 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		675217B01ED4939000EADB09 /* SubProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubProject.swift; sourceTree = "<group>"; };
+		675217B21ED4957A00EADB09 /* ProjectResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectResponse.swift; sourceTree = "<group>"; };
 		67528BB21EC3094B00565896 /* DataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
 		67528BB41EC30B2E00565896 /* SubjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
 		67528BB71EC318D800565896 /* TreeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTableViewCell.swift; sourceTree = "<group>"; };
@@ -386,6 +392,9 @@
 				678FB6811E91E634002C2D73 /* User.swift */,
 				6779E4BD1EA1D2E9003AEC22 /* UserResponse.swift */,
 				679B5DB11EAB3B65001BDAD1 /* BaseResponse.swift */,
+				675217AE1ED4929F00EADB09 /* Project.swift */,
+				675217B01ED4939000EADB09 /* SubProject.swift */,
+				675217B21ED4957A00EADB09 /* ProjectResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -737,6 +746,7 @@
 				670C364C1EC8B542001DA6AD /* RoleViewController.swift in Sources */,
 				678FB6E21E91E634002C2D73 /* UserProvider.swift in Sources */,
 				678FB69D1E91E634002C2D73 /* ArrayExtension.swift in Sources */,
+				675217B11ED4939000EADB09 /* SubProject.swift in Sources */,
 				678FB6A31E91E634002C2D73 /* UIColorExtension.swift in Sources */,
 				67528BB91EC318D800565896 /* TreeTableViewCell.swift in Sources */,
 				676DFBF21E9BDEBE009DB6B0 /* ProfileDetailViewController.swift in Sources */,
@@ -760,6 +770,7 @@
 				678FB6901E91E634002C2D73 /* ProfileInfoViewController.swift in Sources */,
 				6779E4BE1EA1D2E9003AEC22 /* UserResponse.swift in Sources */,
 				67528BB31EC3094B00565896 /* DataObject.swift in Sources */,
+				675217AF1ED4929F00EADB09 /* Project.swift in Sources */,
 				678FB6E71E91E634002C2D73 /* ReservationNetworkProvider.swift in Sources */,
 				678FB6E11E91E634002C2D73 /* NetworkConfigurations.swift in Sources */,
 				678FB68E1E91E634002C2D73 /* BaseViewController.swift in Sources */,
@@ -771,6 +782,7 @@
 				678FB69E1E91E634002C2D73 /* DecoderExtension.swift in Sources */,
 				679B5DB01EAB27E6001BDAD1 /* RegisterViewController.swift in Sources */,
 				678FB6971E91E634002C2D73 /* Constant.swift in Sources */,
+				675217B31ED4957A00EADB09 /* ProjectResponse.swift in Sources */,
 				678FB6AB1E91E634002C2D73 /* FilterManager.swift in Sources */,
 				678FB69C1E91E634002C2D73 /* TinryTabBarController.swift in Sources */,
 				678FB6A01E91E634002C2D73 /* NSDateExtension.swift in Sources */,
