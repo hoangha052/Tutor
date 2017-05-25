@@ -40,7 +40,7 @@ enum GiaSuAPI {
             case .login:
                 return "user/userLogin"
             case .register:
-                return "User/register"
+                return "user/UserRegister"
             case .getListUser(let userId, let roleId, let pageSize):
                 return "User/getUserList/\(userId)/\(roleId)/\(pageSize)"
             case .addUserFavorite(let currentUserId, let favUserId):

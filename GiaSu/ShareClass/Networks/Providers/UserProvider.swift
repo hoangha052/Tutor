@@ -90,7 +90,7 @@ class UserProvider {
     func registerUser(userRegister: User, completionHandler: @escaping(UserResponse?) -> ())  {
         
         let registerURL = GiaSuAPI.User.register.urlString()
-        NetworkProvider().postDataWithMultipart(registerURL, imageData: [userRegister.imageProfile!], params: userRegister.toJSON() as! [String : AnyObject]) { (responseObject, error) in
+        NetworkProvider().postDataWithMultipart(registerURL, imageData: [userRegister.imageProfile!], params: userRegister.toJSON()! as [String : AnyObject]) { (responseObject, error) in
             if let response = responseObject as? JSON {
                 let user = UserResponse.init(listUserJson: response)
                 completionHandler(user)

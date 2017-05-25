@@ -49,6 +49,7 @@ final class User: NSObject, Decodable, Encodable {
         return jsonify([
             "username" ~~> self.username,
             "userRole" ~~> self.userRoleId,
+            "passWord" ~~> self.password,
             "salary" ~~> self.price,
             "expericence" ~~> "4",
             "degree" ~~> "Senior",
@@ -56,7 +57,8 @@ final class User: NSObject, Decodable, Encodable {
             "description" ~~> self.descriptionStr,
             "sex" ~~> "1",
             "school" ~~> "HUI University",
-            "subjectLevelList" ~~> "1-6"
+            "subjectLevelList" ~~> "1-6",
+            "address" ~~> self.address
             ])
     }
 
