@@ -61,7 +61,7 @@ struct Constants {
 }
 
 struct AppColors {
-    static let main = "#f58027"
+    static let main = "#66C6BA"
     static let mainBackground = "#ebebeb"
     static let mainGray = "#959595"
     static let buttonNormalState = "#959595"

@@ -36,11 +36,15 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func loginButtonClick(_ sender: Any) {
+        self.showLoaddingView()
         UserProvider().userLogin(userName: userNameTextField.text!, password: passwordTextField.text!) { (response) in
+            self.hideLoaddingView()
             if let userValue = response?.userData  {
                 UserManager.sharedInstance.saveUser(userValue)
 //                print("userData", userValue)
                 self.loginSuccess()
+            } else {
+                self.loadDataFail((response?.error())!)
             }
         }
     }

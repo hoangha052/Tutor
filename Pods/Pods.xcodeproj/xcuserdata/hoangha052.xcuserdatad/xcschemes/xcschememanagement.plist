@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NVActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -45,11 +50,6 @@
 			<false/>
 		</dict>
 		<key>Pods-GiaSuUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RATreeView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -77,17 +77,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B1AF32FA775FABE902F9F38F10A6634</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>13388F9B5B48AA4B77EC5997E091009B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3EDFE4052B5DE7D509935AC0774CB135</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,17 +102,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D5750BCA2E47CED06BA62EC8F4858B5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6E4F5A4822D33ABB767486E6BFE69963</key>
+		<key>7C126CE268E00458158FA5FF3FB9ECC6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F89AA5459472A996A8AA70070E60EA0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>934CE413CECF0003D7935B21362D6CD4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,17 +132,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>C2BDD4E4DA13DA4EBE344B4388C98DD8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C4944FEC314D1A66588651D006273ADE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF155AB50C253694BB3ED035CDA2D01D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FA796418BBC4399FC5C18161D3EB7581</key>
+		<key>C737485E4EFE93515E8775CB4096ABE1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

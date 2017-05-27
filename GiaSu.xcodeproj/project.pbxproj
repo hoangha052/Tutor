@@ -69,6 +69,8 @@
 		679B5DAE1EAB26B1001BDAD1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679B5DAD1EAB26B1001BDAD1 /* LoginViewController.swift */; };
 		679B5DB01EAB27E6001BDAD1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679B5DAF1EAB27E6001BDAD1 /* RegisterViewController.swift */; };
 		679B5DB21EAB3B65001BDAD1 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679B5DB11EAB3B65001BDAD1 /* BaseResponse.swift */; };
+		67D0EBEB1ED9D85000A399E0 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D0EBEA1ED9D85000A399E0 /* BorderButton.swift */; };
+		67D0EBEE1ED9DB4100A399E0 /* UIAlertControllerBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D0EBED1ED9DB4100A399E0 /* UIAlertControllerBlock.swift */; };
 		82DA3123F9A474D65394B240 /* Pods_GiaSu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AABC7527BA87D388EED279 /* Pods_GiaSu.framework */; };
 		9C17E44B40398BF3D4BA3E6B /* Pods_GiaSuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E70C0496ED025E0E03B240 /* Pods_GiaSuTests.framework */; };
 /* End PBXBuildFile section */
@@ -162,6 +164,8 @@
 		679B5DAD1EAB26B1001BDAD1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		679B5DAF1EAB27E6001BDAD1 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		679B5DB11EAB3B65001BDAD1 /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		67D0EBEA1ED9D85000A399E0 /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
+		67D0EBED1ED9DB4100A399E0 /* UIAlertControllerBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerBlock.swift; sourceTree = "<group>"; };
 		7B4B8C4B5D0E801FF913D238 /* Pods-GiaSuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiaSuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiaSuUITests/Pods-GiaSuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		94763844887CF387A4F5930E /* Pods-GiaSuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiaSuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiaSuTests/Pods-GiaSuTests.release.xcconfig"; sourceTree = "<group>"; };
 		D0AABC7527BA87D388EED279 /* Pods_GiaSu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiaSu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -275,6 +279,7 @@
 		678FB6231E91E634002C2D73 /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				67D0EBED1ED9DB4100A399E0 /* UIAlertControllerBlock.swift */,
 				678FB6241E91E634002C2D73 /* BaseViewController.swift */,
 			);
 			path = BaseClass;
@@ -343,6 +348,7 @@
 		678FB6351E91E634002C2D73 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				67D0EBEA1ED9D85000A399E0 /* BorderButton.swift */,
 				67528BB71EC318D800565896 /* TreeTableViewCell.swift */,
 				67528BB81EC318D800565896 /* TreeTableViewCell.xib */,
 				678FB6361E91E634002C2D73 /* BaseTabBarController.swift */,
@@ -750,6 +756,7 @@
 				678FB6A31E91E634002C2D73 /* UIColorExtension.swift in Sources */,
 				67528BB91EC318D800565896 /* TreeTableViewCell.swift in Sources */,
 				676DFBF21E9BDEBE009DB6B0 /* ProfileDetailViewController.swift in Sources */,
+				67D0EBEE1ED9DB4100A399E0 /* UIAlertControllerBlock.swift in Sources */,
 				678FB6A71E91E634002C2D73 /* UITableViewExtension.swift in Sources */,
 				678FB6A81E91E634002C2D73 /* UITextViewExtension.swift in Sources */,
 				676DFBF01E9BDBE2009DB6B0 /* FavoriteViewController.swift in Sources */,
@@ -786,6 +793,7 @@
 				678FB6AB1E91E634002C2D73 /* FilterManager.swift in Sources */,
 				678FB69C1E91E634002C2D73 /* TinryTabBarController.swift in Sources */,
 				678FB6A01E91E634002C2D73 /* NSDateExtension.swift in Sources */,
+				67D0EBEB1ED9D85000A399E0 /* BorderButton.swift in Sources */,
 				678FB6991E91E634002C2D73 /* PaddingLabel.swift in Sources */,
 				678FB6911E91E634002C2D73 /* AppearanceServices.swift in Sources */,
 				678FB6931E91E634002C2D73 /* MainServices.swift in Sources */,
