@@ -33,11 +33,12 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func ruleButtonClick(_ sender: Any) {
+        ruleButton.isSelected = !ruleButton.isSelected
     }
     
     @IBAction func loginButtonClick(_ sender: Any) {
         self.showLoaddingView()
-        UserProvider().userLogin(userName: userNameTextField.text!, password: passwordTextField.text!) { (response) in
+        UserProvider().userLogin(userName: userNameTextField.text!, password: passwordTextField.text!, userRole: ruleButton.isSelected) { (response) in
             self.hideLoaddingView()
             if let userValue = response?.userData  {
                 UserManager.sharedInstance.saveUser(userValue)

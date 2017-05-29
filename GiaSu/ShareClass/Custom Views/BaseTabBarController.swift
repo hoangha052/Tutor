@@ -26,7 +26,8 @@ class BaseTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addObservers()
+        self.delegate = self
+//        addObservers()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -151,5 +152,32 @@ extension BaseTabBarController {
         UserDefaults.standard.set(0, forKey: Constants.UserDefaultKey.newMessageCount)
         self.tabBar.items![1].badgeValue = nil
     }
+}
+
+extension BaseTabBarController: UITabBarControllerDelegate {
+    //    func fistViewController() {
+    //        let tripProvider = UIStoryboard.tnr_createViewController(storyboardName: Constants.Storyboard.tripProvider, viewControllerIdentifier: "TouristMainViewController") as! TouristMainViewController
+    //        let navigationController = UIStoryboard.tnr_createViewController(storyboardName: Constants.Storyboard.mainProvider, viewControllerIdentifier: "BookTouristNavigationController") as! UINavigationController
+    //
+    //        navigationController.setViewControllers([tripProvider], animated: false)
+    //        self.viewControllers![0] = navigationController
+    //    }
+    //
+        func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+            if self.selectedIndex == 1 {
+                let mesengerController = UIStoryboard.tnr_createViewController(storyboardName: "Messenger", viewControllerIdentifier:"MessengersViewController") as! MessengersViewController
+    
+                   let naviController = UIStoryboard.tnr_createViewController(storyboardName: "Main", viewControllerIdentifier:"UINaviMessengerController") as! UINavigationController
+                naviController.setViewControllers([mesengerController], animated: true)
+//                let naviVC = UINavigationController.init(rootViewController: mesengerController)
+                tabBarController.viewControllers![1] = naviController
+            }
+    
+    
+        }
+        
+        func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+            return true
+}
 }
 

@@ -10,7 +10,6 @@
 		01DD9C754C3F84514CBAA87F /* Pods_GiaSuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164BE2E8D730556A2A8B6F41 /* Pods_GiaSuUITests.framework */; };
 		67057A4E1E8CA25300039756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67057A4D1E8CA25300039756 /* AppDelegate.swift */; };
 		67057A531E8CA25300039756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67057A511E8CA25300039756 /* Main.storyboard */; };
-		67057A551E8CA25300039756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67057A541E8CA25300039756 /* Assets.xcassets */; };
 		67057A581E8CA25300039756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67057A561E8CA25300039756 /* LaunchScreen.storyboard */; };
 		67057A631E8CA25300039756 /* GiaSuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67057A621E8CA25300039756 /* GiaSuTests.swift */; };
 		67057A6E1E8CA25300039756 /* GiaSuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67057A6D1E8CA25300039756 /* GiaSuUITests.swift */; };
@@ -37,8 +36,6 @@
 		678FB6981E91E634002C2D73 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6361E91E634002C2D73 /* BaseTabBarController.swift */; };
 		678FB6991E91E634002C2D73 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6371E91E634002C2D73 /* PaddingLabel.swift */; };
 		678FB69A1E91E634002C2D73 /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6381E91E634002C2D73 /* PaddingTextField.swift */; };
-		678FB69B1E91E634002C2D73 /* ProviderTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB6391E91E634002C2D73 /* ProviderTabBarViewController.swift */; };
-		678FB69C1E91E634002C2D73 /* TinryTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB63A1E91E634002C2D73 /* TinryTabBarController.swift */; };
 		678FB69D1E91E634002C2D73 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB63C1E91E634002C2D73 /* ArrayExtension.swift */; };
 		678FB69E1E91E634002C2D73 /* DecoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB63D1E91E634002C2D73 /* DecoderExtension.swift */; };
 		678FB69F1E91E634002C2D73 /* EncoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678FB63E1E91E634002C2D73 /* EncoderExtension.swift */; };
@@ -71,6 +68,13 @@
 		679B5DB21EAB3B65001BDAD1 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679B5DB11EAB3B65001BDAD1 /* BaseResponse.swift */; };
 		67D0EBEB1ED9D85000A399E0 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D0EBEA1ED9D85000A399E0 /* BorderButton.swift */; };
 		67D0EBEE1ED9DB4100A399E0 /* UIAlertControllerBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D0EBED1ED9DB4100A399E0 /* UIAlertControllerBlock.swift */; };
+		67D0EBF01EDBFA7600A399E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67D0EBEF1EDBFA7600A399E0 /* Assets.xcassets */; };
+		67D0EBF21EDC016100A399E0 /* Messenger.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67D0EBF11EDC016100A399E0 /* Messenger.storyboard */; };
+		67D0EBF91EDC035000A399E0 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D0EBF41EDC035000A399E0 /* ConversationViewController.swift */; };
+		67D0EBFA1EDC035000A399E0 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D0EBF51EDC035000A399E0 /* MessageViewController.swift */; };
+		67D0EBFB1EDC035000A399E0 /* MessengersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D0EBF61EDC035000A399E0 /* MessengersViewController.swift */; };
+		67D0EBFC1EDC035000A399E0 /* MessengerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D0EBF81EDC035000A399E0 /* MessengerTableViewCell.swift */; };
+		67D0EBFE1EDC099100A399E0 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D0EBFD1EDC099100A399E0 /* BaseNavigationViewController.swift */; };
 		82DA3123F9A474D65394B240 /* Pods_GiaSu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AABC7527BA87D388EED279 /* Pods_GiaSu.framework */; };
 		9C17E44B40398BF3D4BA3E6B /* Pods_GiaSuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E70C0496ED025E0E03B240 /* Pods_GiaSuTests.framework */; };
 /* End PBXBuildFile section */
@@ -99,7 +103,6 @@
 		67057A4A1E8CA25300039756 /* GiaSu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiaSu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67057A4D1E8CA25300039756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67057A521E8CA25300039756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		67057A541E8CA25300039756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67057A571E8CA25300039756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67057A591E8CA25300039756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67057A5E1E8CA25300039756 /* GiaSuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiaSuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,8 +135,6 @@
 		678FB6361E91E634002C2D73 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		678FB6371E91E634002C2D73 /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		678FB6381E91E634002C2D73 /* PaddingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
-		678FB6391E91E634002C2D73 /* ProviderTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderTabBarViewController.swift; sourceTree = "<group>"; };
-		678FB63A1E91E634002C2D73 /* TinryTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinryTabBarController.swift; sourceTree = "<group>"; };
 		678FB63C1E91E634002C2D73 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		678FB63D1E91E634002C2D73 /* DecoderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoderExtension.swift; sourceTree = "<group>"; };
 		678FB63E1E91E634002C2D73 /* EncoderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncoderExtension.swift; sourceTree = "<group>"; };
@@ -166,6 +167,13 @@
 		679B5DB11EAB3B65001BDAD1 /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		67D0EBEA1ED9D85000A399E0 /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
 		67D0EBED1ED9DB4100A399E0 /* UIAlertControllerBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerBlock.swift; sourceTree = "<group>"; };
+		67D0EBEF1EDBFA7600A399E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67D0EBF11EDC016100A399E0 /* Messenger.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Messenger.storyboard; sourceTree = "<group>"; };
+		67D0EBF41EDC035000A399E0 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		67D0EBF51EDC035000A399E0 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		67D0EBF61EDC035000A399E0 /* MessengersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengersViewController.swift; sourceTree = "<group>"; };
+		67D0EBF81EDC035000A399E0 /* MessengerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerTableViewCell.swift; sourceTree = "<group>"; };
+		67D0EBFD1EDC099100A399E0 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
 		7B4B8C4B5D0E801FF913D238 /* Pods-GiaSuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiaSuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiaSuUITests/Pods-GiaSuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		94763844887CF387A4F5930E /* Pods-GiaSuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiaSuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiaSuTests/Pods-GiaSuTests.release.xcconfig"; sourceTree = "<group>"; };
 		D0AABC7527BA87D388EED279 /* Pods_GiaSu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiaSu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,14 +244,15 @@
 		67057A4C1E8CA25300039756 /* GiaSu */ = {
 			isa = PBXGroup;
 			children = (
+				67D0EBEF1EDBFA7600A399E0 /* Assets.xcassets */,
 				678FB6231E91E634002C2D73 /* BaseClass */,
 				678FB6251E91E634002C2D73 /* Module */,
 				678FB6291E91E634002C2D73 /* Services */,
 				678FB62F1E91E634002C2D73 /* ShareClass */,
 				67057A4D1E8CA25300039756 /* AppDelegate.swift */,
+				67D0EBF11EDC016100A399E0 /* Messenger.storyboard */,
 				679B5DAA1EAB1FF3001BDAD1 /* Authen.storyboard */,
 				67057A511E8CA25300039756 /* Main.storyboard */,
-				67057A541E8CA25300039756 /* Assets.xcassets */,
 				67057A561E8CA25300039756 /* LaunchScreen.storyboard */,
 				67057A591E8CA25300039756 /* Info.plist */,
 			);
@@ -279,6 +288,7 @@
 		678FB6231E91E634002C2D73 /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				67D0EBFD1EDC099100A399E0 /* BaseNavigationViewController.swift */,
 				67D0EBED1ED9DB4100A399E0 /* UIAlertControllerBlock.swift */,
 				678FB6241E91E634002C2D73 /* BaseViewController.swift */,
 			);
@@ -288,6 +298,7 @@
 		678FB6251E91E634002C2D73 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				67D0EBF31EDC035000A399E0 /* Messenger */,
 				679B5DAC1EAB2689001BDAD1 /* Authen */,
 				676DFBEE1E9BDBC9009DB6B0 /* Favorite */,
 				678FB6261E91E634002C2D73 /* Home */,
@@ -354,8 +365,6 @@
 				678FB6361E91E634002C2D73 /* BaseTabBarController.swift */,
 				678FB6371E91E634002C2D73 /* PaddingLabel.swift */,
 				678FB6381E91E634002C2D73 /* PaddingTextField.swift */,
-				678FB6391E91E634002C2D73 /* ProviderTabBarViewController.swift */,
-				678FB63A1E91E634002C2D73 /* TinryTabBarController.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -446,6 +455,25 @@
 				670C364B1EC8B542001DA6AD /* RoleViewController.swift */,
 			);
 			path = Authen;
+			sourceTree = "<group>";
+		};
+		67D0EBF31EDC035000A399E0 /* Messenger */ = {
+			isa = PBXGroup;
+			children = (
+				67D0EBF41EDC035000A399E0 /* ConversationViewController.swift */,
+				67D0EBF51EDC035000A399E0 /* MessageViewController.swift */,
+				67D0EBF61EDC035000A399E0 /* MessengersViewController.swift */,
+				67D0EBF71EDC035000A399E0 /* View */,
+			);
+			path = Messenger;
+			sourceTree = "<group>";
+		};
+		67D0EBF71EDC035000A399E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				67D0EBF81EDC035000A399E0 /* MessengerTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B95FC081CFB085CF9F416BBA /* Pods */ = {
@@ -577,11 +605,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D0EBF21EDC016100A399E0 /* Messenger.storyboard in Resources */,
 				67057A581E8CA25300039756 /* LaunchScreen.storyboard in Resources */,
 				679B5DAB1EAB1FF3001BDAD1 /* Authen.storyboard in Resources */,
-				67057A551E8CA25300039756 /* Assets.xcassets in Resources */,
 				67057A531E8CA25300039756 /* Main.storyboard in Resources */,
 				67528BBA1EC318D800565896 /* TreeTableViewCell.xib in Resources */,
+				67D0EBF01EDBFA7600A399E0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,11 +797,12 @@
 				678FB6E31E91E634002C2D73 /* ActivityProvider.swift in Sources */,
 				678FB6A61E91E634002C2D73 /* UIStoryboardExtension.swift in Sources */,
 				678FB68F1E91E634002C2D73 /* PageHomeViewController.swift in Sources */,
-				678FB69B1E91E634002C2D73 /* ProviderTabBarViewController.swift in Sources */,
 				678B2BB41EC89FDB00BF2DD4 /* ExperienceViewController.swift in Sources */,
 				678FB6921E91E634002C2D73 /* FacebookHandlerServices.swift in Sources */,
 				678FB6E61E91E634002C2D73 /* OfferNetworkProvider.swift in Sources */,
 				678FB6A11E91E634002C2D73 /* StringExtension.swift in Sources */,
+				67D0EBFB1EDC035000A399E0 /* MessengersViewController.swift in Sources */,
+				67D0EBF91EDC035000A399E0 /* ConversationViewController.swift in Sources */,
 				678FB6A91E91E634002C2D73 /* UIViewControllerExtension.swift in Sources */,
 				678FB6901E91E634002C2D73 /* ProfileInfoViewController.swift in Sources */,
 				6779E4BE1EA1D2E9003AEC22 /* UserResponse.swift in Sources */,
@@ -783,15 +813,17 @@
 				678FB68E1E91E634002C2D73 /* BaseViewController.swift in Sources */,
 				678FB6981E91E634002C2D73 /* BaseTabBarController.swift in Sources */,
 				678FB69A1E91E634002C2D73 /* PaddingTextField.swift in Sources */,
+				67D0EBFA1EDC035000A399E0 /* MessageViewController.swift in Sources */,
 				679B5DAE1EAB26B1001BDAD1 /* LoginViewController.swift in Sources */,
 				678FB6AC1E91E634002C2D73 /* NotificationManager.swift in Sources */,
 				678FB6E41E91E634002C2D73 /* AuthNetworkProvider.swift in Sources */,
+				67D0EBFE1EDC099100A399E0 /* BaseNavigationViewController.swift in Sources */,
 				678FB69E1E91E634002C2D73 /* DecoderExtension.swift in Sources */,
 				679B5DB01EAB27E6001BDAD1 /* RegisterViewController.swift in Sources */,
+				67D0EBFC1EDC035000A399E0 /* MessengerTableViewCell.swift in Sources */,
 				678FB6971E91E634002C2D73 /* Constant.swift in Sources */,
 				675217B31ED4957A00EADB09 /* ProjectResponse.swift in Sources */,
 				678FB6AB1E91E634002C2D73 /* FilterManager.swift in Sources */,
-				678FB69C1E91E634002C2D73 /* TinryTabBarController.swift in Sources */,
 				678FB6A01E91E634002C2D73 /* NSDateExtension.swift in Sources */,
 				67D0EBEB1ED9D85000A399E0 /* BorderButton.swift in Sources */,
 				678FB6991E91E634002C2D73 /* PaddingLabel.swift in Sources */,

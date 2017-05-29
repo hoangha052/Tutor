@@ -19,7 +19,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JSQMessagesViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JSQSystemSoundPlayer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -50,6 +65,11 @@
 			<false/>
 		</dict>
 		<key>Pods-GiaSuUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Protobuf.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -97,12 +117,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4F2C77B1E02E98EEAE66C2586F6C15C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>513061169BC32F7B27DA332A07850376</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7C126CE268E00458158FA5FF3FB9ECC6</key>
+		<key>7D8130B9094BD2CC870CBC32E27B86E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,17 +137,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8F89AA5459472A996A8AA70070E60EA0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>934CE413CECF0003D7935B21362D6CD4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9502FB01641FBABB78522037E882757B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>97CFB0C76E8308539D6F1EE4015D6F88</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,17 +152,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2BDD4E4DA13DA4EBE344B4388C98DD8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C4944FEC314D1A66588651D006273ADE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C737485E4EFE93515E8775CB4096ABE1</key>
+		<key>C5B80060FE8C664DF08841000F41D515</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C7DCF2B547F7871B9BFD74DE93B0E173</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CDA2F59B31A4CB3347605E93CD8D050F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D0581AF7BF4A6DA140D280B19ECC7BFF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1563F00D9CC3F43004CFA1FB10C5315</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E79E22D7A25C51009366EFD977572DB0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

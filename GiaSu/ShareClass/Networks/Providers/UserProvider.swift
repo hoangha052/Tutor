@@ -15,19 +15,23 @@ import Gloss
 
 class UserProvider {    
     func getAllUser(completionHandler: @escaping(UserResponse?) -> ())  {
-            let getAllUserURL = GiaSuAPI.User.getListUser(15, 1, 10).urlString()
+        if let user = UserManager.sharedInstance.getUser()
+        {
+            let getAllUserURL = GiaSuAPI.User.getListUser(user.userId!, 0, 1).urlString()
             NetworkProvider().get(getAllUserURL, params: nil) { (responseObject, error) in
                 let user: UserResponse?
                 if let response = responseObject as? JSON {
                     user = UserResponse.init(listUserJson: response)
                     completionHandler(user)
                 }
+            }
         }
     }
     
-    func userLogin(userName: String, password: String, completionHandler: @escaping(UserResponse?) -> ())  {
+    func userLogin(userName: String, password: String, userRole: Bool ,completionHandler: @escaping(UserResponse?) -> ())  {
         let loginUrl = GiaSuAPI.User.login.urlString()
-        let params = ["username" : userName, "password" : password, "UserRole": 1] as [String : Any]
+        let roleValue = userRole ? 1 : 0
+        let params = ["username" : userName, "password" : password, "UserRole": roleValue] as [String : Any]
         
         NetworkProvider().post(loginUrl, params: params as [String : AnyObject]?) { (responseObject, error) in
             
@@ -92,7 +96,7 @@ class UserProvider {
         let registerURL = GiaSuAPI.User.register.urlString()
         NetworkProvider().postDataWithMultipart(registerURL, imageData: [userRegister.imageProfile!], params: userRegister.toJSON()! as [String : AnyObject]) { (responseObject, error) in
             if let response = responseObject as? JSON {
-                let user = UserResponse.init(listUserJson: response)
+                let user = UserResponse.init(json: response)
                 completionHandler(user)
             }
         }

@@ -57,6 +57,7 @@ class TreeTableViewCell : UITableViewCell {
         selectedBackgroundView?.backgroundColor = .clear
     }
 
+    
     var additionButtonActionBlock : ((TreeTableViewCell) -> Void)?;
 
 
@@ -83,14 +84,15 @@ class TreeTableViewCell : UITableViewCell {
         if let project = data as? Project {
             self.customTitleLabel.text = project.subject!
             self.projectData = project
-            self.cellType = ((project.levels?.count)! > 0) ? ProjectType.rootLevel : ProjectType.subLevel
-        } else {
-            let subProject = data as! SubProject
-            self.customTitleLabel.text = subProject.level!
-            self.subProjectData = subProject
-            self.cellType = .subLevel
-            self.trailingConstraintLabel.constant = 20
-        }   
+            self.cellType = project.levels != nil ? ProjectType.rootLevel : ProjectType.subLevel
+        }
+//        else {
+//            let subProject = data as! SubProject
+//            self.customTitleLabel.text = subProject.level!
+//            self.subProjectData = subProject
+//            self.cellType = .subLevel
+//            self.trailingConstraintLabel.constant = 20
+//        }   
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

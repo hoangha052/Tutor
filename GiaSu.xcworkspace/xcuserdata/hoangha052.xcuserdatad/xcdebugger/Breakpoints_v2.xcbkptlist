@@ -9,12 +9,86 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GiaSu/Module/Authen/ExperienceViewController.swift"
-            timestampString = "517369179.85361"
+            filePath = "GiaSu/ShareClass/Networks/Providers/UserProvider.swift"
+            timestampString = "517739272.511958"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "registerUser(userRegister:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GiaSu.UserProvider.(registerUser (userRegister : GiaSu.User, completionHandler : (Swift.Optional&lt;GiaSu.UserResponse&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "GiaSu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoangha052/Documents/PraticeProject/GiaSuData/GiaSu/GiaSu/ShareClass/Networks/Providers/UserProvider.swift"
+                  timestampString = "517746163.105213"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GiaSu.UserProvider.(registerUser (userRegister : GiaSu.User, completionHandler : (Swift.Optional&lt;GiaSu.UserResponse&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "GiaSu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoangha052/Documents/PraticeProject/GiaSuData/GiaSu/GiaSu/ShareClass/Networks/Providers/UserProvider.swift"
+                  timestampString = "517746163.106926"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GiaSu/Module/Authen/ExperienceViewController.swift"
+            timestampString = "517742482.738671"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "registerUser(userData:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GiaSu/Module/Authen/ExperienceViewController.swift"
+            timestampString = "517743188.418826"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "registerUser(userData:)"
             landmarkType = "7">
             <Locations>
@@ -26,12 +100,12 @@
                   moduleName = "GiaSu"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hoangha052/Documents/PraticeProject/GiaSuData/GiaSu/GiaSu/Module/Authen/ExperienceViewController.swift"
-                  timestampString = "517594926.827198"
+                  timestampString = "517746163.128821"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "19">
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "170">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,12 +115,12 @@
                   moduleName = "GiaSu"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hoangha052/Documents/PraticeProject/GiaSuData/GiaSu/GiaSu/Module/Authen/ExperienceViewController.swift"
-                  timestampString = "517594926.82944"
+                  timestampString = "517746163.130225"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "131">
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "278">
                </Location>
             </Locations>
          </BreakpointContent>

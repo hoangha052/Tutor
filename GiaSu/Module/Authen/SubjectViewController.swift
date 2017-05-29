@@ -13,7 +13,7 @@ class SubjectViewController: BaseViewController, UITableViewDelegate, UITableVie
 
     @IBOutlet weak var subjectTableView: UITableView!
 //    @IBOutlet weak var subjectTreeView: RATreeView!
-    var data : [AnyObject] = []
+    var data : [Project] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +38,21 @@ class SubjectViewController: BaseViewController, UITableViewDelegate, UITableVie
         }
     }
     
+    @IBAction func nextButtonClick(_ sender: Any) {
+//        let subjectSelected = subjectTableView.indexPathsForSelectedRows
+        var idSelected = ""
+
+        
+        let dataSelected = self.data.filter { item in
+            item.selected == true
+        }
+            for indexSelected in dataSelected {
+                    idSelected  = idSelected + "-" + "\(indexSelected.projectId!)"
+            }
+        self.performSegue(withIdentifier: "ExperienceSegue", sender: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -56,7 +71,6 @@ class SubjectViewController: BaseViewController, UITableViewDelegate, UITableVie
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TreeTableViewCell") as! TreeTableViewCell
-//        cell.configRootCell(self.data[safe: indexPath.row]! as! Project)
         cell.configCell(self.data[safe: indexPath.row]!)
         return cell
     }
@@ -76,7 +90,12 @@ class SubjectViewController: BaseViewController, UITableViewDelegate, UITableVie
             tableView.endUpdates()
         } else {
             print("subLevel")
+            if let data = self.data[indexPath.row] as? Project {
+                data.selected = !data.selected
+            }
+            
         }
+//        cell.isSelected = !cell.isSelected
         cell.isSelectedCell = !cell.isSelectedCell
     }
 

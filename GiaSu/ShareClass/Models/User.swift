@@ -9,7 +9,7 @@
 import Foundation
 import Gloss
 
-final class User: NSObject, Decodable, Encodable {
+final class User: NSObject, Decodable, Encodable, NSCoding {
     var userId: Int?
     var username: String?
     var email: String?
@@ -21,34 +21,69 @@ final class User: NSObject, Decodable, Encodable {
     var imageProfile: UIImage?
     var password: String?
     var address: String?
-    var price: String?
+    var price: Int?
+    var experience: Int?
+    var degree: String?
+    var school: String?
     
     
-    var clientKey: String?
-    var accessToken: String?
-    var name: String?
-    var paypalEmail: String?
+//    var clientKey: String?
+//    var accessToken: String?
+//    var name: String?
+//    var paypalEmail: String?
 
     
     init?(json: JSON) {
         self.userId = "Id" <~~ json
-        self.username = "Username" <~~ json
-        self.clientKey = "ClientKey" <~~ json
-        self.accessToken = "AccessToken" <~~ json
-        self.email = "Email" <~~ json
-        self.phone = "Phone" <~~ json
+        self.username = "username" <~~ json
         self.userRoleId = "userrole" <~~ json
-        self.isActive = "Active" <~~ json
-        self.name = "Name" <~~ json
-        self.avatar = "Link" <~~ json
+        self.email = "Email" <~~ json
+        self.price = "salary" <~~ json
+        self.experience = "experience" <~~ json
+        self.degree = "degree" <~~ json
+        self.address = "address" <~~ json
+        self.phone = "phoneNo" <~~ json
+        self.userRoleId = "userrole" <~~ json
         self.descriptionStr = "description" <~~ json
+        self.avatar = "avatar" <~~ json
+        self.school = "school" <~~ json
+    }
+    
+    init?(coder aDecoder: NSCoder) {
+        self.userId = aDecoder.decodeObject(forKey: "UserId") as? Int
+        self.username = aDecoder.decodeObject(forKey: "Username") as? String
+        self.userRoleId = aDecoder.decodeObject(forKey: "Userrole") as? Int
+//        self.email = aDecoder.decodeObject(forKey: "Email") as? String
+        self.price = aDecoder.decodeObject(forKey: "Price") as? Int
+        self.experience = aDecoder.decodeObject(forKey: "experience") as? Int
+        self.degree = aDecoder.decodeObject(forKey: "Degree") as? String
+        self.address = aDecoder.decodeObject(forKey: "Address") as? String
+        self.phone = aDecoder.decodeObject(forKey: "Phone") as? String
+        self.descriptionStr = aDecoder.decodeObject(forKey: "Description") as? String
+        self.avatar = aDecoder.decodeObject(forKey: "avatar") as? String
+        self.school = aDecoder.decodeObject(forKey: "School") as? String
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.userId, forKey: "UserId")
+        aCoder.encode(self.username, forKey: "Username")
+        aCoder.encode(self.userRoleId, forKey: "Userrole")
+//        aCoder.encode(self.email, forKey: "Email")
+        aCoder.encode(self.price, forKey: "Price")
+        aCoder.encode(self.experience, forKey: "experience")
+        aCoder.encode(self.degree, forKey: "Degree")
+        aCoder.encode(self.address, forKey: "Address")
+        aCoder.encode(self.phone, forKey: "Phone")
+        aCoder.encode(self.descriptionStr, forKey: "Description")
+        aCoder.encode(self.avatar, forKey: "avatar")
+        aCoder.encode(self.school, forKey: "School")
     }
     
     func toJSON() -> JSON? {
-        
         return jsonify([
             "username" ~~> self.username,
             "userRole" ~~> self.userRoleId,
+            "email" ~~> self.email,
             "passWord" ~~> self.password,
             "salary" ~~> self.price,
             "expericence" ~~> "4",
@@ -61,7 +96,6 @@ final class User: NSObject, Decodable, Encodable {
             "address" ~~> self.address
             ])
     }
-
     
     init(userId: Int) {
         self.userId =  userId
@@ -71,29 +105,5 @@ final class User: NSObject, Decodable, Encodable {
         self.userRoleId = roleId
     }
     
-    init?(coder aDecoder: NSCoder) {
-        self.userId = aDecoder.decodeObject(forKey: "UserId") as? Int
-        self.username = aDecoder.decodeObject(forKey: "Username") as? String
-        self.clientKey = aDecoder.decodeObject(forKey: "ClientKey") as? String
-        self.accessToken = aDecoder.decodeObject(forKey: "AccessToken") as? String
-        self.email = aDecoder.decodeObject(forKey: "Email") as? String
-        self.userRoleId = aDecoder.decodeObject(forKey: "UserRoleId") as? Int
-        self.isActive = aDecoder.decodeBool(forKey: "IsActive")
-        self.avatar = aDecoder.decodeObject(forKey: "Link") as? String
-        self.name = aDecoder.decodeObject(forKey: "Name") as? String
-        self.paypalEmail = aDecoder.decodeObject(forKey: "PaypalEmail") as? String
-    }
-    
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(self.userId, forKey: "UserId")
-        aCoder.encode(self.username, forKey: "Username")
-        aCoder.encode(self.clientKey, forKey: "ClientKey")
-        aCoder.encode(self.accessToken, forKey: "AccessToken")
-        aCoder.encode(self.email, forKey: "Email")
-        aCoder.encode(self.userRoleId, forKey: "UserRoleId")
-        aCoder.encode(self.isActive!, forKey: "IsActive")
-        aCoder.encode(self.avatar, forKey: "Link")
-        aCoder.encode(self.name, forKey: "Name")
-        aCoder.encode(self.paypalEmail, forKey: "PaypalEmail")
-    }
+
 }

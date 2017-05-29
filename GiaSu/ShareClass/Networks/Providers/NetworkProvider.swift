@@ -69,8 +69,7 @@ class NetworkProvider {
             }
         }
     }
-    
-    
+        
     func postDataWithMultipart(_ urlString: String, imageData:[UIImage?], params:[String: AnyObject]?, completionHandler: @escaping(AnyObject?, NSError?) -> ()) {
             let _ = Alamofire.upload(multipartFormData: {
                 multipartFormData in
@@ -120,8 +119,22 @@ class NetworkProvider {
             }, to: urlString, encodingCompletion: {
                 encodingResult in
                 switch encodingResult {
-                case .success(let response):
-                    completionHandler(response as AnyObject?, nil)
+                case .success(let upload, _, _):
+                    upload.responseJSON(completionHandler: { (responseData) in
+                        switch responseData.result {
+                        case .success(let response):
+                            completionHandler(response as AnyObject?, nil)
+                        case .failure(let error):
+                            completionHandler(nil, error as NSError?)
+                        }
+                    })
+//                    upload.response { [weak self] response in
+////                        guard self != nil else {
+////                            return
+////                        }
+//                      
+//                    }
+                    
                 case .failure(let error):
                     completionHandler(nil, error as NSError?)
                 }

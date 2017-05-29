@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import NVActivityIndicatorView
 
 protocol HomePageViewDelegate: class {
     
@@ -37,7 +37,7 @@ class PageHomeViewController:  UIPageViewController {
     weak var homePageViewDelegate: HomePageViewDelegate?
     var userList:[User]?
     var orderedViewControllers: [UIViewController] = []
-    
+    var activityData: ActivityData?
 //    fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
 //        let profileVC =
 //        
@@ -52,17 +52,32 @@ class PageHomeViewController:  UIPageViewController {
 //            scrollToViewController(initialViewController)
 //             print("pageViewController")
 //        }
+        self.activityData = ActivityData.init(size: CGSize.init(width: 60, height: 60), message: nil, messageFont: nil, type: .ballSpinFadeLoader, color: UIColor.init(rgba: AppColors.main) , padding: 0, displayTimeThreshold: 10, minimumDisplayTime: 1, backgroundColor:UIColor.clear)
        
         self.getUserInfo()
     }
     
     func getUserInfo() {
+        self.showLoaddingView()
         UserProvider().getAllUser { (dataResponse) in
-            self.userList = dataResponse?.data
-            let vc = self.profileViewCV(user: (self.userList?[safe: 0])!)
-            self.orderedViewControllers.append(vc)
-            self.scrollToViewController(vc)
+            self.hideLoaddingView()
+            guard let responseValue = dataResponse else { return }
+            
+            if let userList = responseValue.data, userList.count > 0 {
+                self.userList = userList
+                let vc = self.profileViewCV(user: (self.userList?[safe: 0])!)
+                self.orderedViewControllers.append(vc)
+                self.scrollToViewController(vc)
+            }
         }
+    }
+    
+    func showLoaddingView() {
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(self.activityData!)
+    }
+    
+    func hideLoaddingView() {
+        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
     }
     
 }

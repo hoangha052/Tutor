@@ -18,6 +18,11 @@ target 'GiaSu' do
 #    pod 'RATreeView', '~> 2.1.2'
     pod 'YangMingShan'
     pod 'NVActivityIndicatorView', '~> 3.5.2'
+    pod 'Firebase'
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
+    pod 'Firebase/Database'
+    pod 'JSQMessagesViewController'
     
   target 'GiaSuTests' do
     inherit! :search_paths

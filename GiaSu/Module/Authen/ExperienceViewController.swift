@@ -26,16 +26,22 @@ class ExperienceViewController: BaseViewController {
     
     @IBAction func nextButtonClick(_ sender: Any) {
        let userRegister = UserManager.sharedInstance.loggedInUser
-        userRegister?.price = priceTextField.text!
+        userRegister?.price = Int(priceTextField.text!)
         userRegister?.descriptionStr = introduceTextView.text!
         self.registerUser(userData: userRegister!)
     }
 
     func registerUser(userData: User) {
+//        self.showLoaddingView()
         UserProvider().registerUser(userRegister: userData) { (response) in
+            self.hideLoaddingView()
+            if (response?.noError())! {
             if let userValue = response?.userData  {
                 UserManager.sharedInstance.saveUser(userValue)
                 self.gotoMainView()
+                }
+            } else {
+                self.loadDataFail((response?.error())!)
             }
 
         }

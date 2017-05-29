@@ -12,8 +12,8 @@ import Gloss
 class Project: NSObject, Decodable {
     var projectId: Int?
     var subject: String?
-    var levels: [SubProject]?
-    
+    var levels: [Project]?
+    var selected : Bool = false
     required init?(json: JSON) {
         self.projectId = "id" <~~ json
         self.subject = "subject" <~~ json
